@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(claude-api)",
+      "Skill(claude-api:*)",
+      "Bash(python3 -c \":*)",
+      "Bash(python3 -c \"import agents.generator\")",
+      "Bash(pip install:*)",
+      "Bash(python3 -c \"import facebook; print\\(''facebook OK''\\)\")",
+      "Bash(pip3 install:*)",
+      "Bash(python3 -c \"import facebook; print\\(''''facebook OK''''\\)\")",
+      "Bash(python3 -c \"import main; print\\(''main.py imports OK''\\)\")",
+      "Bash(python3 main.py --help)"
+    ]
+  }
+}

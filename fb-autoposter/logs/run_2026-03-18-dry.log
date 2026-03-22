@@ -1,0 +1,149 @@
+2026-03-18 21:35:29,673  INFO     ════ fb-autoposter weekly run — 2026-03-18 ════
+2026-03-18 21:35:29,673  INFO     ✅ Config validated
+2026-03-18 21:35:29,674  INFO     Pruned 4 resolved post(s) from queue (4 remaining).
+2026-03-18 21:36:16,734  INFO     ════ fb-autoposter weekly run — 2026-03-18 ════
+2026-03-18 21:36:16,734  INFO     ✅ Config validated
+2026-03-18 21:36:16,976  INFO     Inbox low — processing 1 project story post this week.
+2026-03-18 21:36:16,976  INFO     ✅ Inbox checked (1 project(s) found)  branch_a_count=1
+2026-03-18 21:36:16,976  INFO     ── Branch A: generating 1 post(s)…
+2026-03-18 21:36:17,061  INFO     Analyzing project: proj-luxury-1
+2026-03-18 21:36:17,061  INFO     Analyzing project: proj-luxury-1
+2026-03-18 21:36:17,062  INFO     Video project detected (1 video(s))
+2026-03-18 21:36:17,068  INFO     Analyzing video: vid-3.mp4
+2026-03-18 21:36:17,135  INFO     Duration: 8.6 s
+2026-03-18 21:36:25,651  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:36:25,671  INFO     Content type detected: walkthrough
+2026-03-18 21:36:25,672  INFO     Description: This stunning bathroom renovation features a luxurious freestanding white soaking tub positioned beneath a large arched window with a elegant chandelier overhead. The space showcases warm wood-toned floating vanity cabinetry paired with a white marble or quartz countertop and matte black fixtures throughout, including the tub filler and sink faucet. A large rectangular mirror with rounded corners is mounted above the vanity with a multi-light industrial-style fixture above. The walls are painted in a soft, warm neutral tone with clean white tile flooring completing the modern yet inviting design.
+2026-03-18 21:36:25,672  INFO     Trim target: 30–60 s
+2026-03-18 21:36:25,696  INFO     Trimmed to 8.6 s → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/trimmed/vid-3_trimmed.mp4
+2026-03-18 21:36:25,698  INFO     Moved 'proj-luxury-1' → processed/
+2026-03-18 21:36:25,698  INFO     Generating Branch A post for: proj-luxury-1
+2026-03-18 21:36:35,074  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:36:43,092  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:36:51,662  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:36:59,958  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:37:09,383  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:37:09,386  INFO     ✅ Branch A ready: proj-luxury-1                   score=8.4  slot=2026-03-16T10:00
+2026-03-18 21:37:09,386  INFO     ✅ Branch A: 1 post(s) generated
+2026-03-18 21:37:09,386  INFO     ── Branch B: generating 4 post(s)…
+2026-03-18 21:37:09,397  INFO     Generating 4 Branch B maintenance post(s)…
+2026-03-18 21:37:09,403  INFO     Skipping 9 recently used topics
+2026-03-18 21:37:18,948  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:37:18,949  INFO     Topics selected: ['Reapply silicone sealant around your bathtub before spring thaw', 'Test your bathroom exhaust fan airflow before humid summer arrives', 'Seal grout lines in entryway tile to survive winter salt and slush', 'Flush and drain outdoor hose bibs before the first hard freeze']
+2026-03-18 21:37:18,949  INFO     Fetching Pexels image for: bathtub silicone sealant caulking repair
+2026-03-18 21:37:23,305  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:37:23,307  INFO       Photo 6124242 — score 8.0
+2026-03-18 21:37:26,276  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:37:26,277  INFO       Photo 5691660 — score 4.2
+2026-03-18 21:37:29,040  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:37:29,042  INFO       Photo 3615723 — score 6.3
+2026-03-18 21:37:31,599  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:37:31,601  INFO       Photo 6755079 — score 2.7
+2026-03-18 21:37:35,056  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:37:35,058  INFO       Photo 1476321 — score 2.7
+2026-03-18 21:37:38,256  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:37:38,259  INFO       Photo 6755139 — score 3.7
+2026-03-18 21:37:41,122  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:37:41,125  INFO       Photo 15554492 — score 3.7
+2026-03-18 21:37:43,761  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:37:43,763  INFO       Photo 6473975 — score 4.3
+2026-03-18 21:37:46,243  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:37:46,244  INFO       Photo 6755144 — score 2.5
+2026-03-18 21:37:48,503  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:37:48,505  INFO       Photo 1432669 — score 3.3
+2026-03-18 21:37:48,788  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathtub_silicone_sealant_caulking_repair.jpeg
+2026-03-18 21:37:48,789  INFO     Generating post for: Reapply silicone sealant around your bathtub before spring thaw
+2026-03-18 21:37:56,688  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:38:05,085  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:38:05,087  INFO     Fetching Pexels image for: bathroom exhaust fan vent airflow
+2026-03-18 21:38:08,550  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:38:08,552  INFO       Photo 28766940 — score 4.2
+2026-03-18 21:38:11,945  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:38:11,946  INFO       Photo 33644851 — score 3.8
+2026-03-18 21:38:14,916  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:38:14,918  INFO       Photo 12326860 — score 2.2
+2026-03-18 21:38:18,154  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:38:18,156  INFO       Photo 36285830 — score 3.2
+2026-03-18 21:38:21,776  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:38:21,778  INFO       Photo 35489678 — score 3.2
+2026-03-18 21:38:24,951  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:38:24,954  INFO       Photo 1650031 — score 5.2
+2026-03-18 21:38:27,511  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:38:27,512  INFO       Photo 36248286 — score 5.2
+2026-03-18 21:38:30,378  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:38:30,380  INFO       Photo 416423 — score 3.7
+2026-03-18 21:38:33,552  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:38:33,554  INFO       Photo 15737642 — score 4.2
+2026-03-18 21:38:37,238  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:38:37,240  INFO       Photo 22938256 — score 3.8
+2026-03-18 21:38:37,608  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathroom_exhaust_fan_vent_airflow.jpeg
+2026-03-18 21:38:37,608  INFO     Generating post for: Test your bathroom exhaust fan airflow before humid summer arrives
+2026-03-18 21:38:45,841  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:38:55,211  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:38:55,215  INFO     Fetching Pexels image for: entryway floor tile grout sealing
+2026-03-18 21:38:58,437  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:38:58,439  INFO       Photo 6788312 — score 4.7
+2026-03-18 21:39:01,345  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:39:01,347  INFO       Photo 11806489 — score 7.0
+2026-03-18 21:39:04,649  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:39:04,650  INFO       Photo 11061219 — score 5.0
+2026-03-18 21:39:08,061  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:39:08,063  INFO       Photo 11806482 — score 7.0
+2026-03-18 21:39:12,055  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:39:12,058  INFO       Photo 25636681 — score 4.0
+2026-03-18 21:39:15,537  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:39:15,538  INFO       Photo 11806476 — score 7.0
+2026-03-18 21:39:18,507  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:39:18,509  INFO       Photo 11806477 — score 7.0
+2026-03-18 21:39:22,602  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:39:22,604  INFO       Photo 24357101 — score 7.3
+2026-03-18 21:39:25,097  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:39:25,099  INFO       Photo 11806490 — score 7.2
+2026-03-18 21:39:27,927  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:39:27,929  INFO       Photo 12924578 — score 6.8
+2026-03-18 21:39:28,120  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_entryway_floor_tile_grout_sealing.jpeg
+2026-03-18 21:39:28,120  INFO     Generating post for: Seal grout lines in entryway tile to survive winter salt and slush
+2026-03-18 21:39:36,633  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:39:45,939  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:39:45,941  INFO     Fetching Pexels image for: outdoor hose bib winterize plumbing
+2026-03-18 21:39:49,227  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:39:49,229  INFO       Photo 16341408 — score 7.0
+2026-03-18 21:39:52,197  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:39:52,201  INFO       Photo 6501134 — score 4.8
+2026-03-18 21:39:57,436  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:39:57,438  INFO       Photo 35634634 — score 3.7
+2026-03-18 21:39:59,979  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:39:59,981  INFO       Photo 12329328 — score 5.8
+2026-03-18 21:40:03,052  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:40:03,054  INFO       Photo 36090543 — score 4.2
+2026-03-18 21:40:06,198  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:40:06,199  INFO       Photo 31215839 — score 5.8
+2026-03-18 21:40:09,056  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:40:09,059  INFO       Photo 13060858 — score 3.3
+2026-03-18 21:40:11,960  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:40:11,962  INFO       Photo 12274593 — score 3.0
+2026-03-18 21:40:15,441  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:40:15,443  INFO       Photo 28101096 — score 4.8
+2026-03-18 21:40:18,955  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:40:18,958  INFO       Photo 34573111 — score 2.5
+2026-03-18 21:40:19,250  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_outdoor_hose_bib_winterize_plumbing.jpeg
+2026-03-18 21:40:19,251  INFO     Generating post for: Flush and drain outdoor hose bibs before the first hard freeze
+2026-03-18 21:40:28,549  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:40:38,073  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:40:50,361  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:40:58,244  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:41:06,642  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:41:16,884  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:41:16,891  INFO     Saved 4 topics to topic_history.json
+2026-03-18 21:41:24,665  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:41:24,668  INFO     ✅ Branch B ready: Reapply silicone sealant around your bathtub before spring thaw  score=8.3  slot=2026-03-18T11:00
+2026-03-18 21:41:33,063  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:41:33,065  INFO     ✅ Branch B ready: Test your bathroom exhaust fan airflow before humid summer arrives  score=8.1  slot=2026-03-19T11:00
+2026-03-18 21:41:42,074  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:41:42,076  INFO     ✅ Branch B ready: Seal grout lines in entryway tile to survive winter salt and slush  score=7.9  slot=2026-03-20T10:00
+2026-03-18 21:41:53,021  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-18 21:41:53,023  INFO     ✅ Branch B ready: Flush and drain outdoor hose bibs before the first hard freeze  score=7.7  slot=2026-03-21T12:00
+2026-03-18 21:41:53,024  INFO     ✅ Branch B: 4 post(s) generated
+2026-03-18 21:41:53,024  INFO     Total posts this run: 5
+2026-03-18 21:41:53,029  INFO     Run log written → run_log.json
+2026-03-18 21:41:53,029  INFO     ════ Run complete ════
