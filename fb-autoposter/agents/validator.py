@@ -1,7 +1,7 @@
 """
 validator.py — Critic agent for Facebook post quality control.
 
-Scores posts on: hook strength, clarity, CTA, tone match, length.
+Scores posts on: hook strength, clarity, CTA, tone match, length, value_vs_pitch.
 Returns: {"approved": bool, "score": float, "feedback": str}
 """
 
@@ -21,20 +21,23 @@ for {COMPANY_NAME}, a bathroom renovation company in {COMPANY_LOCATION}.
 
 Score the post from 0–10 on each criterion below, then set overall_score to the average:
 
-  hook_strength  — Does the opening line grab attention and make you want to keep reading?
-  clarity        — Is the message clear, easy to read, and free of jargon?
-  cta            — Is there a natural, non-pushy call-to-action (e.g. DM us, comment below)?
-  tone_match     — Does it feel like a friendly local contractor, NOT a corporate brand?
-  length         — Is it the right length for Facebook (100–280 words)? Penalise anything outside.
+  hook_strength   — Does the opening line grab attention and make you want to keep reading?
+  clarity         — Is the message clear, easy to read, and free of jargon?
+  cta             — Is there a natural, non-pushy call-to-action (e.g. DM us, comment below)?
+  tone_match      — Does it feel like a friendly local contractor, NOT a corporate brand?
+  length          — Is it the right length for Facebook (100–280 words)? Penalise anything outside.
+  value_vs_pitch  — Does the post deliver genuine value or education (score 10) vs. feel like a \
+sales pitch (score 0)? 80% of posts should be genuinely helpful or entertaining, not promotional.
 
 Respond ONLY with valid JSON — no markdown fences, no extra text:
 {{
   "scores": {{
-    "hook_strength": <float 0-10>,
-    "clarity":       <float 0-10>,
-    "cta":           <float 0-10>,
-    "tone_match":    <float 0-10>,
-    "length":        <float 0-10>
+    "hook_strength":  <float 0-10>,
+    "clarity":        <float 0-10>,
+    "cta":            <float 0-10>,
+    "tone_match":     <float 0-10>,
+    "length":         <float 0-10>,
+    "value_vs_pitch": <float 0-10>
   }},
   "overall_score": <float 0-10>,
   "feedback": "<one concise paragraph of specific, actionable feedback for the writer>"

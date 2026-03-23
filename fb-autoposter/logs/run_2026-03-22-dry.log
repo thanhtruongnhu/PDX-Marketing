@@ -1,0 +1,257 @@
+2026-03-22 18:52:31,266  INFO     ════ fb-autoposter weekly run — 2026-03-22 ════
+2026-03-22 18:52:31,266  INFO     ✅ Config validated
+2026-03-22 18:52:31,267  INFO     Pruned 10 post(s) from queue (0 remaining).
+2026-03-22 18:52:31,519  INFO     Inbox empty — skipping project story posts this week.
+2026-03-22 18:52:31,519  INFO     ✅ Inbox checked (0 project(s) found)  branch_a_count=0
+2026-03-22 18:52:31,519  INFO     ── Branch B: generating 3 post(s)…
+2026-03-22 18:52:31,653  INFO     Generating 3 Branch B maintenance post(s)…
+2026-03-22 18:52:31,658  INFO     Skipping 0 recently used topics
+2026-03-22 18:52:38,229  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:52:38,258  INFO     Topics selected: ["Prep your bathroom caulking before Toronto's freeze-thaw season", 'Clean and test your bathroom exhaust fan for humid GTA summers', 'How to prevent grout mould in winter when windows stay shut']
+2026-03-22 18:52:38,258  INFO     Fetching Pexels image for: bathroom caulking replacement silicone tub
+2026-03-22 18:52:41,707  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:52:41,709  INFO       Photo 5691660 — score 4.2
+2026-03-22 18:52:44,677  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:52:44,679  INFO       Photo 7195883 — score 7.7
+2026-03-22 18:52:47,442  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:52:47,443  INFO       Photo 6124242 — score 8.0
+2026-03-22 18:52:51,544  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:52:51,545  INFO       Photo 534116 — score 7.0
+2026-03-22 18:52:54,406  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:52:54,408  INFO       Photo 3769114 — score 6.2
+2026-03-22 18:52:57,579  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:52:57,580  INFO       Photo 4154986 — score 8.3
+2026-03-22 18:53:00,242  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:53:00,243  INFO       Photo 7031832 — score 8.0
+2026-03-22 18:53:05,055  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:53:05,057  INFO       Photo 4405007 — score 7.5
+2026-03-22 18:53:09,071  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:53:09,074  INFO       Photo 6207947 — score 7.8
+2026-03-22 18:53:13,965  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:53:13,967  INFO       Photo 7027725 — score 7.7
+2026-03-22 18:53:14,189  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathroom_caulking_replacement_silicone_t.jpeg
+2026-03-22 18:53:14,190  INFO     Generating post for: Prep your bathroom caulking before Toronto's freeze-thaw season
+2026-03-22 18:53:23,751  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:53:32,433  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:53:32,435  INFO     Fetching Pexels image for: bathroom exhaust fan cleaning maintenance
+2026-03-22 18:53:35,878  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:53:35,880  INFO       Photo 4239123 — score 7.7
+2026-03-22 18:53:38,499  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:53:38,501  INFO       Photo 4239031 — score 8.0
+2026-03-22 18:53:40,897  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:53:40,898  INFO       Photo 5591464 — score 8.0
+2026-03-22 18:53:43,251  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:53:43,253  INFO       Photo 5591461 — score 8.0
+2026-03-22 18:53:45,503  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:53:45,505  INFO       Photo 4239130 — score 7.3
+2026-03-22 18:53:48,762  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:53:48,764  INFO       Photo 4239142 — score 7.7
+2026-03-22 18:53:51,649  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:53:51,651  INFO       Photo 3867607 — score 7.3
+2026-03-22 18:53:54,160  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:53:54,162  INFO       Photo 5591490 — score 7.8
+2026-03-22 18:53:56,563  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:53:56,565  INFO       Photo 3867618 — score 8.5
+2026-03-22 18:53:59,430  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:53:59,433  INFO       Photo 7027795 — score 7.5
+2026-03-22 18:53:59,699  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathroom_exhaust_fan_cleaning_maintenanc.jpeg
+2026-03-22 18:53:59,699  INFO     Generating post for: Clean and test your bathroom exhaust fan for humid GTA summers
+2026-03-22 18:54:09,365  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:54:19,851  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:54:19,853  INFO     Fetching Pexels image for: shower grout mould prevention tiles
+2026-03-22 18:54:26,362  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:54:26,364  INFO       Photo 4194867 — score 6.8
+2026-03-22 18:54:29,125  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:54:29,127  INFO       Photo 5644327 — score 6.8
+2026-03-22 18:54:31,751  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:54:31,754  INFO       Photo 7166939 — score 7.7
+2026-03-22 18:54:34,145  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:54:34,147  INFO       Photo 3990586 — score 8.2
+2026-03-22 18:54:36,502  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:54:36,505  INFO       Photo 3958966 — score 8.2
+2026-03-22 18:54:39,607  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:54:39,609  INFO       Photo 4933253 — score 8.3
+2026-03-22 18:54:42,234  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:54:42,236  INFO       Photo 7546284 — score 7.8
+2026-03-22 18:54:45,016  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:54:45,019  INFO       Photo 6316060 — score 7.7
+2026-03-22 18:54:47,866  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:54:47,867  INFO       Photo 7587746 — score 7.3
+2026-03-22 18:54:50,631  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:54:50,633  INFO       Photo 3758497 — score 7.2
+2026-03-22 18:54:50,806  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_shower_grout_mould_prevention_tiles.jpeg
+2026-03-22 18:54:50,807  INFO     Generating post for: How to prevent grout mould in winter when windows stay shut
+2026-03-22 18:55:01,383  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:55:10,414  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:55:10,417  INFO     Saved 3 topics to topic_history.json
+2026-03-22 18:55:19,713  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:55:19,715  INFO     ✅ Branch B ready: Prep your bathroom caulking before Toronto's freeze-thaw season  score=8.8  slot=2026-03-16T07:30
+2026-03-22 18:55:28,930  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:55:28,932  INFO     ✅ Branch B ready: Clean and test your bathroom exhaust fan for humid GTA summers  score=9.1  slot=2026-03-17T08:00
+2026-03-22 18:55:38,247  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:55:38,249  INFO     ✅ Branch B ready: How to prevent grout mould in winter when windows stay shut  score=8.4  slot=2026-03-20T08:00
+2026-03-22 18:55:38,250  INFO     ✅ Branch B: 3 post(s) generated
+2026-03-22 18:55:38,250  INFO     ── Branch C: generating saves post for Sunday…
+2026-03-22 18:55:38,250  INFO     ── Branch C: generating saves post for Sunday…
+2026-03-22 18:55:38,250  INFO     Skipping 3 recently used topics
+2026-03-22 18:55:41,423  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:55:41,425  INFO     Topics selected: ['Check your bathroom waterproofing before spring thaw']
+2026-03-22 18:55:41,425  INFO     Fetching Pexels image for: bathroom tile waterproofing moisture damage
+2026-03-22 18:55:44,872  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:55:44,874  INFO       Photo 36087810 — score 6.3
+2026-03-22 18:55:47,567  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:55:47,569  INFO       Photo 6436770 — score 7.3
+2026-03-22 18:55:49,818  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:55:49,821  INFO       Photo 6934233 — score 7.5
+2026-03-22 18:55:53,301  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:55:53,303  INFO       Photo 7587734 — score 7.2
+2026-03-22 18:55:55,861  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:55:55,864  INFO       Photo 5146920 — score 6.3
+2026-03-22 18:55:58,113  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:55:58,115  INFO       Photo 7195883 — score 7.5
+2026-03-22 18:56:00,550  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:56:00,553  INFO       Photo 5266482 — score 6.2
+2026-03-22 18:56:03,029  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:56:03,032  INFO       Photo 3958966 — score 8.2
+2026-03-22 18:56:06,024  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:56:06,026  INFO       Photo 7303867 — score 7.3
+2026-03-22 18:56:08,354  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:56:08,356  INFO       Photo 7166936 — score 7.2
+2026-03-22 18:56:08,523  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathroom_tile_waterproofing_moisture_dam.jpeg
+2026-03-22 18:56:08,523  INFO     Generating post for: Check your bathroom waterproofing before spring thaw
+2026-03-22 18:56:18,185  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:56:27,297  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:56:27,301  INFO     Saved 1 topics to topic_history.json
+2026-03-22 18:56:36,835  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:56:46,243  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:57:24,954  INFO     ════ fb-autoposter weekly run — 2026-03-22 ════
+2026-03-22 18:57:24,954  INFO     ✅ Config validated
+2026-03-22 18:57:25,180  INFO     Inbox empty — skipping project story posts this week.
+2026-03-22 18:57:25,180  INFO     ✅ Inbox checked (0 project(s) found)  branch_a_count=0
+2026-03-22 18:57:25,180  INFO     ── Branch B: generating 3 post(s)…
+2026-03-22 18:57:25,256  INFO     Generating 3 Branch B maintenance post(s)…
+2026-03-22 18:57:25,260  INFO     Skipping 4 recently used topics
+2026-03-22 18:57:32,528  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:57:32,554  INFO     Topics selected: ["Descale your showerhead before Toronto's hard water buildup worsens", 'Replace bathroom door weatherstripping to control summer humidity spread', 'Inspect tile expansion gaps before winter temperature swings crack your grout']
+2026-03-22 18:57:32,554  INFO     Fetching Pexels image for: showerhead cleaning bathroom close up
+2026-03-22 18:57:35,498  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:57:35,499  INFO       Photo 5241048 — score 5.5
+2026-03-22 18:57:38,263  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:57:38,265  INFO       Photo 5266482 — score 6.2
+2026-03-22 18:57:41,235  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:57:41,236  INFO       Photo 6933774 — score 7.5
+2026-03-22 18:57:43,587  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:57:43,589  INFO       Photo 4194866 — score 7.0
+2026-03-22 18:57:47,798  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:57:47,799  INFO       Photo 7086495 — score 7.3
+2026-03-22 18:57:50,344  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:57:50,345  INFO       Photo 3958966 — score 8.2
+2026-03-22 18:57:53,006  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:57:53,007  INFO       Photo 4404973 — score 7.8
+2026-03-22 18:57:55,515  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:57:55,516  INFO       Photo 6980672 — score 7.7
+2026-03-22 18:57:58,024  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:57:58,026  INFO       Photo 6444256 — score 7.3
+2026-03-22 18:58:00,588  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:58:00,590  INFO       Photo 1571462 — score 7.7
+2026-03-22 18:58:00,801  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_showerhead_cleaning_bathroom_close_up.jpeg
+2026-03-22 18:58:00,801  INFO     Generating post for: Descale your showerhead before Toronto's hard water buildup worsens
+2026-03-22 18:58:10,928  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:58:20,759  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:58:20,763  INFO     Fetching Pexels image for: bathroom door moisture condensation home
+2026-03-22 18:58:23,728  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:58:23,729  INFO       Photo 7587812 — score 7.7
+2026-03-22 18:58:26,448  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:58:26,450  INFO       Photo 950002 — score 7.0
+2026-03-22 18:58:29,463  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:58:29,465  INFO       Photo 7214169 — score 7.0
+2026-03-22 18:58:32,936  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:58:32,938  INFO       Photo 6835174 — score 6.5
+2026-03-22 18:58:35,736  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:58:35,737  INFO       Photo 7045362 — score 7.7
+2026-03-22 18:58:38,369  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:58:38,371  INFO       Photo 6588586 — score 7.7
+2026-03-22 18:58:40,931  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:58:40,932  INFO       Photo 3990586 — score 8.2
+2026-03-22 18:58:43,750  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:58:43,752  INFO       Photo 5502225 — score 8.0
+2026-03-22 18:58:46,164  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:58:46,167  INFO       Photo 36087810 — score 6.3
+2026-03-22 18:58:48,885  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:58:48,887  INFO       Photo 7546608 — score 7.7
+2026-03-22 18:58:49,085  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathroom_door_moisture_condensation_home.jpeg
+2026-03-22 18:58:49,086  INFO     Generating post for: Replace bathroom door weatherstripping to control summer humidity spread
+2026-03-22 18:58:58,135  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:59:07,966  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:59:07,968  INFO     Fetching Pexels image for: bathroom floor tile grout inspection
+2026-03-22 18:59:11,243  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:59:11,245  INFO       Photo 4154188 — score 7.7
+2026-03-22 18:59:13,757  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:59:13,759  INFO       Photo 4154986 — score 8.3
+2026-03-22 18:59:16,261  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:59:16,263  INFO       Photo 4030050 — score 8.2
+2026-03-22 18:59:19,434  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:59:19,435  INFO       Photo 4469182 — score 8.0
+2026-03-22 18:59:22,200  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:59:22,202  INFO       Photo 7601096 — score 7.8
+2026-03-22 18:59:25,374  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:59:25,376  INFO       Photo 6934233 — score 7.3
+2026-03-22 18:59:28,152  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:59:28,154  INFO       Photo 6899353 — score 7.8
+2026-03-22 18:59:31,211  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:59:31,212  INFO       Photo 2988865 — score 8.3
+2026-03-22 18:59:34,795  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:59:34,796  INFO       Photo 7045362 — score 7.7
+2026-03-22 18:59:37,865  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:59:37,866  INFO       Photo 4933241 — score 8.7
+2026-03-22 18:59:38,307  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathroom_floor_tile_grout_inspection.jpeg
+2026-03-22 18:59:38,308  INFO     Generating post for: Inspect tile expansion gaps before winter temperature swings crack your grout
+2026-03-22 18:59:48,926  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:59:58,199  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 18:59:58,203  INFO     Saved 3 topics to topic_history.json
+2026-03-22 19:00:06,231  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:00:06,234  INFO     ✅ Branch B ready: Descale your showerhead before Toronto's hard water buildup worsens  score=8.8  slot=2026-03-16T07:30
+2026-03-22 19:00:17,195  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:00:17,197  INFO     ✅ Branch B ready: Replace bathroom door weatherstripping to control summer humidity spread  score=8.9  slot=2026-03-17T08:00
+2026-03-22 19:00:26,713  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:00:26,715  INFO     ✅ Branch B ready: Inspect tile expansion gaps before winter temperature swings crack your grout  score=9.1  slot=2026-03-20T08:00
+2026-03-22 19:00:26,715  INFO     ✅ Branch B: 3 post(s) generated
+2026-03-22 19:00:26,715  INFO     ── Branch C: generating saves post for Sunday…
+2026-03-22 19:00:26,715  INFO     ── Branch C: generating saves post for Sunday…
+2026-03-22 19:00:26,716  INFO     Skipping 7 recently used topics
+2026-03-22 19:00:31,115  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:00:31,116  INFO     Topics selected: ["Flush your bathroom supply valves before Toronto's winter freeze"]
+2026-03-22 19:00:31,116  INFO     Fetching Pexels image for: bathroom water shut off valve
+2026-03-22 19:00:34,375  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:00:34,376  INFO       Photo 7616004 — score 5.2
+2026-03-22 19:00:36,902  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:00:36,904  INFO       Photo 3616761 — score 4.7
+2026-03-22 19:00:39,410  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:00:39,412  INFO       Photo 4048080 — score 7.7
+2026-03-22 19:00:42,240  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:00:42,241  INFO       Photo 4194862 — score 6.8
+2026-03-22 19:00:45,074  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:00:45,140  INFO       Photo 3758497 — score 7.2
+2026-03-22 19:00:47,807  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:00:47,809  INFO       Photo 7578999 — score 7.7
+2026-03-22 19:00:50,629  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:00:50,631  INFO       Photo 3944859 — score 7.7
+2026-03-22 19:00:53,440  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:00:53,441  INFO       Photo 36650049 — score 7.7
+2026-03-22 19:00:56,204  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:00:56,205  INFO       Photo 6969997 — score 7.7
+2026-03-22 19:00:59,377  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:00:59,379  INFO       Photo 5710334 — score 8.0
+2026-03-22 19:00:59,573  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathroom_water_shut_off_valve.jpeg
+2026-03-22 19:00:59,573  INFO     Generating post for: Flush your bathroom supply valves before Toronto's winter freeze
+2026-03-22 19:01:08,454  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:01:17,194  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:01:17,197  INFO     Saved 1 topics to topic_history.json
+2026-03-22 19:01:26,207  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:01:35,834  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:01:45,782  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:01:45,784  INFO     ✅ Branch C ready: Flush your bathroom supply valves before Toronto's winter freeze  score=8.8  slot=2026-03-22T09:00
+2026-03-22 19:01:45,784  INFO     ✅ Branch C: 1 post generated
+2026-03-22 19:01:45,784  INFO     Total posts this run: 4
+2026-03-22 19:01:45,787  INFO     Run log written → run_log.json
+2026-03-22 19:01:45,788  INFO     ════ Run complete ════

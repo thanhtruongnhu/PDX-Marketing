@@ -31,7 +31,7 @@ from typing import Union
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 import anthropic
-from config import ANTHROPIC_API_KEY, MODEL
+from config import ANTHROPIC_API_KEY, MODEL, VIDEO_MAX_SECONDS
 
 log = logging.getLogger(__name__)
 client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
@@ -127,7 +127,7 @@ def _analyze_frames(frames: list[tuple[str, str]], video_path: Path) -> dict:
             "type": "text",
             "text": (
                 f"These {len(frames)} frames are evenly spaced throughout a bathroom renovation video "
-                f"from Portland, OR contractor PDX Remodelling Solutions.\n\n"
+                f"from Toronto, ON (GTA) contractor PDX Remodelling Solutions.\n\n"
                 "1. Classify the video content type as one of:\n"
                 "   - before_after  (shows a clear before state and/or after reveal)\n"
                 "   - walkthrough   (tours a completed renovation)\n"
@@ -233,6 +233,7 @@ def edit_video(video_path: Union[Path, str]) -> dict:
     log.info("Description: %s", description)
 
     target_min, target_max = TRIM_RULES.get(content_type, TRIM_RULES["unknown"])
+    target_max = min(target_max, VIDEO_MAX_SECONDS)  # enforce global 60s ceiling
     log.info("Trim target: %d–%d s", target_min, target_max)
 
     out_path = _trim_video(video_path, duration, target_min, target_max)

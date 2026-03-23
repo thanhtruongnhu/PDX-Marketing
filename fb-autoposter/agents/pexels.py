@@ -65,9 +65,10 @@ def _search_pexels(query: str, per_page: int = 10) -> list:
         return json.loads(r.read().decode()).get("photos", [])
 
 
-def _score_photo(photo: dict) -> float:
+def _score_photo(photo: dict, context: str = "") -> float:
     """
     Download a photo and score it with Claude Vision on three criteria.
+    context: the post copy (or topic) this image should complement.
     Returns average score 0–10, or 0.0 on failure.
     """
     url = photo["src"].get("medium") or photo["src"].get("large") or photo["src"]["original"]
@@ -78,6 +79,13 @@ def _score_photo(photo: dict) -> float:
     except Exception as exc:
         log.warning("Could not download photo %s for scoring: %s", photo["id"], exc)
         return 0.0
+
+    relevance_criterion = (
+        f"relevance — how well this photo complements a post that says: "
+        f"\"{context[:400]}\""
+        if context
+        else "relevance — bathroom or home maintenance subject"
+    )
 
     response = client.messages.create(
         model=MODEL,
@@ -103,7 +111,7 @@ def _score_photo(photo: dict) -> float:
                             "Avoid: overly staged stock look, visible watermarks, "
                             "irrelevant subjects.\n\n"
                             "Score 0–10 on each criterion:\n"
-                            "  relevance       — bathroom or home maintenance subject\n"
+                            f"  {relevance_criterion}\n"
                             "  quality         — sharpness, lighting, composition\n"
                             "  lifestyle_feel  — looks real, not too corporate/staged\n\n"
                             "Respond ONLY with valid JSON, no extra text:\n"
@@ -129,12 +137,12 @@ def _score_photo(photo: dict) -> float:
         return 0.0
 
 
-def _pick_best_photo(photos: list) -> dict:
+def _pick_best_photo(photos: list, context: str = "") -> dict:
     """Score all photos with Claude Vision; return the highest-scoring one."""
     scored = []
     for photo in photos:
         try:
-            score = _score_photo(photo)
+            score = _score_photo(photo, context)
             log.info("  Photo %s — score %.1f", photo["id"], score)
             scored.append((photo, score))
         except Exception as exc:
@@ -171,9 +179,12 @@ def _download_photo(photo: dict, slug: str) -> Path:
 # ---------------------------------------------------------------------------
 
 
-def fetch_image(search_query: str) -> dict:
+def fetch_image(search_query: str, context: str = "") -> dict:
     """
     Find, score, and download the best Pexels image for a search query.
+
+    context: optional post copy text — passed to Claude Vision so it scores
+             photos for relevance to the actual post content, not just the topic.
 
     Falls back to a broadened query (last word stripped) if no results.
 
@@ -200,7 +211,7 @@ def fetch_image(search_query: str) -> dict:
     if not photos:
         raise ValueError(f"No Pexels results found for query: {search_query!r}")
 
-    best = _pick_best_photo(photos)
+    best = _pick_best_photo(photos, context)
     local_path = _download_photo(best, slug)
 
     return {

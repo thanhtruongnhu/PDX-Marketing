@@ -1,9 +1,10 @@
 """
 generator.py — Facebook post generator for PDX Remodelling Solutions.
 
-Two branches:
+Three branches:
   A) "project" — Story post from a media context (before/after photos, videos, etc.)
-  B) "tip"     — Home maintenance advice post for Portland homeowners
+  B) "tip"     — Home maintenance advice post for GTA homeowners
+  C) "saves"   — Saves-optimized post: cheat sheet, checklist, or top-5 list
 
 Calls validator.py after each draft; retries up to MAX_RETRIES times with feedback.
 """
@@ -26,6 +27,7 @@ from config import (
     COMPANY_PHONE,
     DUMMY_PROJECT_CONTEXTS,
     DUMMY_TIP_TOPICS,
+    get_season_context,
 )
 from agents.validator import validate_post
 
@@ -185,7 +187,10 @@ Tone: {COMPANY_TONE}.
 {media_note}
 
 Post structure (in this order):
-1. Hook — one punchy opening line based on the transformation
+1. Hook — one punchy opening sentence, **10 words maximum**. No sub-clauses, no em-dashes. \
+The hook or the sentence immediately after it must contain a natural keyword phrase \
+GTA homeowners search for — e.g. "bathroom renovation", "GTA bathroom", "bathroom remodel" — \
+Facebook indexes post content for search discovery.
 2. Story — 2–3 sentences with specific visual details from the media: \
 tile colour, fixtures, layout change, before condition, after result
 3. Subtle company mention — 1 warm sentence, NOT salesy \
@@ -197,6 +202,9 @@ tile colour, fixtures, layout change, before condition, after result
 Rules:
 - 150–250 words total
 - First-person plural only: "our team", "we", "our crew"
+- Write like a real contractor talking to a neighbour — specific, warm, slightly opinionated. \
+NOT a blog article, NOT corporate copy. Use a detail that only someone who has actually \
+done this job would know.
 - 1–3 emojis naturally placed (not a bullet list of emojis)
 - NEVER use: "luxury", "state of the art", "world class", "unbeatable", \
 "transform your dreams" — too salesy
@@ -210,19 +218,49 @@ a bathroom renovation company in {COMPANY_LOCATION}.
 Tone: {COMPANY_TONE}.
 
 Post structure (in this order):
-1. Hook — one relatable opening line about the problem or tip
+1. Hook — one short sentence, **10 words maximum**. Open with a keyword GTA homeowners \
+search for — e.g. "Bathroom tip:", "GTA homeowner tip:", or the topic name directly. \
+Facebook indexes this for search. Keep it punchy — no sub-clauses.
 2. Tip — 3–4 sentences of genuinely useful, specific, actionable advice
 3. Subtle company mention — 1 sentence only, soft \
 (e.g. "If it's past the point of a quick fix, we're always happy to take a look.")
-4. Contact line — exactly: "{COMPANY_NAME} - {COMPANY_PHONE}"
-5. Photo credit — always the very last line, exactly: "📷 Photo by [name] via Pexels"
+4. Contact line — the very last line, exactly: "{COMPANY_NAME} - {COMPANY_PHONE}"
 
 Rules:
 - 120–200 words total
+- Write like a contractor friend giving real advice over the fence — specific, warm, \
+slightly opinionated. NOT a blog article, NOT a listicle, NOT corporate. Use a detail \
+that only someone who has actually done this job would know.
 - GTA homeowners deal with harsh winters, freeze-thaw cycles, and humid summers — \
 factor this in where relevant
-- Knowledgeable neighbour tone — helpful, not a lecture or a sales pitch
 - 1–2 emojis max
+- No hashtags inside the post body"""
+
+
+SAVES_POST_SYSTEM = f"""You write Facebook posts for {COMPANY_NAME}, \
+a bathroom renovation company in {COMPANY_LOCATION}.
+
+Tone: {COMPANY_TONE}.
+
+This post is a saves-optimized format — cheat sheet, numbered checklist, or top-5 list. \
+Choose whichever format fits the topic best.
+
+Post structure (in this order):
+1. Save hook — **≤10 words**, e.g. "Save this 🔖" or "Bookmark this checklist." \
+Do not pad it. Facebook treats saves as a strong reach signal.
+2. List body — 4–6 numbered items or a tight top-5 list. Each item must be ≤ 15 words, \
+specific and actionable for GTA homeowners. No filler.
+3. Subtle company mention — 1 short sentence only \
+(e.g. "When it's beyond a checklist fix, we're here.")
+4. Contact line — the very last line, exactly: "{COMPANY_NAME} - {COMPANY_PHONE}"
+
+Rules:
+- 120–180 words total
+- Voice: conversational and direct — "Here's what we tell every client before they renovate…" \
+NOT a corporate listicle. The list should feel like advice from someone who has done \
+this a hundred times.
+- GTA context where relevant: winters, freeze-thaw, humidity, hard water
+- 1–2 emojis max (save hook counts as one)
 - No hashtags inside the post body"""
 
 
@@ -335,6 +373,7 @@ def generate_project_story_post(media_context: dict, verbose: bool = True) -> di
             f"{intro}\n\n"
             f"Project: {project_name}\n"
             f"What was seen in the media:\n{content_context}\n\n"
+            f"Context: {get_season_context()}\n\n"
             "Return ONLY valid JSON with exactly two keys:\n"
             '  "copy": the full post text (no hashtags inside)\n'
             '  "hashtags": list of 5–8 hashtag strings; always include '
@@ -368,43 +407,39 @@ def generate_maintenance_post(maintenance_context: dict, verbose: bool = True) -
     Args:
         maintenance_context: Dict from topic_picker.py:
             {
-                "topic":        str,
-                "post_angle":   str,
-                "image_path":   str,
-                "image_url":    str,
-                "photographer": str,
-                "pexels_url":   str,
+                "topic":      str,
+                "post_angle": str,
+                "image_path": str,
+                "image_url":  str,
             }
         verbose: Print attempt scores to stdout
 
     Returns:
         {
-            "copy":         str,
-            "hashtags":     list[str],
-            "topic":        str,
-            "image_path":   str,
-            "photographer": str,
+            "copy":       str,
+            "hashtags":   list[str],
+            "topic":      str,
+            "image_path": str,
         }
     """
     topic = maintenance_context.get("topic", "")
     post_angle = maintenance_context.get("post_angle", "")
-    photographer = maintenance_context.get("photographer", "unknown")
     image_path = maintenance_context.get("image_path", "")
 
     def build_prompt(feedback: str) -> str:
         prompt = (
             f"Write a Facebook home maintenance tip post.\n\n"
             f"Topic: {topic}\n"
-            f"Angle: {post_angle}\n\n"
-            f"The post body must end with these two lines in this exact order:\n"
-            f"{COMPANY_NAME} - {COMPANY_PHONE}\n"
-            f"📷 Photo by {photographer} via Pexels\n\n"
+            f"Angle: {post_angle}\n"
+            f"Context: {get_season_context()}\n\n"
+            f"The post body must end with this line:\n"
+            f"{COMPANY_NAME} - {COMPANY_PHONE}\n\n"
             "Return ONLY valid JSON with exactly two keys:\n"
-            '  "copy": the full post text including the contact line and photo credit at the end\n'
+            '  "copy": the full post text including the contact line at the end\n'
             '  "hashtags": list of 5–7 hashtag strings; always include '
             "#homeowner, #bathroomtips, and #hometips, "
             "then 2–4 more relevant to the specific topic\n\n"
-            f'Example format: {{"copy": "post text here\\n{COMPANY_NAME} - {COMPANY_PHONE}\\n📷 Photo by Jane via Pexels", '
+            f'Example format: {{"copy": "post text here\\n{COMPANY_NAME} - {COMPANY_PHONE}", '
             '"hashtags": ["#homeowner", "#bathroomtips", "#hometips"]}'
         )
         if feedback:
@@ -419,11 +454,69 @@ def generate_maintenance_post(maintenance_context: dict, verbose: bool = True) -
     )
 
     return {
-        "copy": copy,
-        "hashtags": hashtags,
-        "topic": topic,
+        "copy":       copy,
+        "hashtags":   hashtags,
+        "topic":      topic,
         "image_path": image_path,
-        "photographer": photographer,
+    }
+
+
+def generate_saves_post(topic_context: dict, verbose: bool = True) -> dict:
+    """
+    Generate a Branch C saves-optimized post (cheat sheet / checklist / top-5 list).
+
+    Args:
+        topic_context: Same structure as maintenance_context from topic_picker.py:
+            {
+                "topic":      str,
+                "post_angle": str,
+                "image_path": str,
+                "image_url":  str,
+            }
+        verbose: Print attempt scores to stdout
+
+    Returns:
+        {
+            "copy":       str,
+            "hashtags":   list[str],
+            "topic":      str,   # short label for Discord/logs
+            "image_path": str,
+        }
+    """
+    topic = topic_context.get("topic", "")
+    post_angle = topic_context.get("post_angle", "")
+    image_path = topic_context.get("image_path", "")
+
+    def build_prompt(feedback: str) -> str:
+        prompt = (
+            f"Write a saves-optimized Facebook post (cheat sheet, checklist, or top-5 list).\n\n"
+            f"Topic: {topic}\n"
+            f"Angle: {post_angle}\n"
+            f"Context: {get_season_context()}\n\n"
+            f"The post body must end with this line:\n"
+            f"{COMPANY_NAME} - {COMPANY_PHONE}\n\n"
+            "Return ONLY valid JSON with exactly two keys:\n"
+            '  "copy": the full post text including the contact line at the end\n'
+            '  "hashtags": list of 5–7 hashtag strings; always include '
+            "#bathroomtips and #homeowner, "
+            "then 3–5 more relevant to the specific topic\n\n"
+            f'Example format: {{"copy": "Save this 🔖\\n\\n1. Tip one\\n2. Tip two\\n\\n{COMPANY_NAME} - {COMPANY_PHONE}", '
+            '"hashtags": ["#bathroomtips", "#homeowner", "#GTAhomes"]}'
+        )
+        if feedback:
+            prompt += (
+                f"\n\nYour previous draft was rejected. "
+                f"Revise based on this feedback:\n{feedback}"
+            )
+        return prompt
+
+    copy, hashtags, _ = _run_with_retry(SAVES_POST_SYSTEM, build_prompt, verbose=verbose)
+
+    return {
+        "copy":       copy,
+        "hashtags":   hashtags,
+        "topic":      topic,
+        "image_path": image_path,
     }
 
 

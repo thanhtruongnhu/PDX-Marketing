@@ -10,7 +10,14 @@
       "Bash(pip3 install:*)",
       "Bash(python3 -c \"import facebook; print\\(''''facebook OK''''\\)\")",
       "Bash(python3 -c \"import main; print\\(''main.py imports OK''\\)\")",
-      "Bash(python3 main.py --help)"
+      "Bash(python3 main.py --help)",
+      "Bash(python3 -c \"from agents.generator import generate_saves_post, generate_project_story_post, generate_maintenance_post; print\\(''generator imports OK''\\)\")",
+      "Bash(python3 -c \"from agents.validator import validate_post, CRITIC_SYSTEM; print\\(''validator imports OK''\\); print\\(''Dimensions:'', [l for l in CRITIC_SYSTEM.split\\(''\\\\n''\\) if l.strip\\(\\).startswith\\(''value_vs_pitch''\\)]\\)\")",
+      "Bash(python3 main.py --dry-run)",
+      "Bash(python3 main.py)",
+      "Bash(python3 -c \"import discord_bot; import main; print\\(''All imports OK''\\)\")",
+      "Bash(python3 main.py --reset)",
+      "Bash(python3 -c \"import json,sys; posts=json.load\\(sys.stdin\\)[''''posts'''']; [print\\(f\"\"{p[''''post_id''''][:8]}  branch={p[''''branch'''']}  status={p[''''status'''']}  topic={p[''''post_context''''].get\\(''''topic''''\\) or p[''''post_context''''].get\\(''''project_name'''',''''?''''\\)}\"\"\\) for p in posts]\")"
     ]
   }
 }

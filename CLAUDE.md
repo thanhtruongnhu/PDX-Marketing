@@ -8,9 +8,9 @@ Multi-agent Facebook autoposter for **PDX Remodelling Solutions**, a bathroom re
 
 ## What this project does
 
-Runs once per week (cron: Monday 8am) to:
+Runs once per week (cron: Monday 7am) to:
 1. Analyze before/after project photos and videos from `media/projects/inbox/`
-2. Generate Facebook post copy via Claude (2 project stories + 3 maintenance tips = 5 posts/week)
+2. Generate Facebook post copy via Claude (2 project stories + 1 maintenance tip + 1 saves post = 4 posts/week)
 3. Send drafts to a private Discord channel for approval
 4. Publish approved posts to the Facebook Page via Graph API (scheduled for their assigned time slots)
 
@@ -20,11 +20,15 @@ Runs once per week (cron: Monday 8am) to:
 
 ```bash
 cd fb-autoposter
-python main.py --dry-run          # generate + print; no Discord or Facebook calls
-python main.py                    # full weekly run
-python main.py --resend-pending   # re-send pending drafts after a bot crash
+python main.py                           # full weekly run
+python main.py --reset                   # clear logs/temp/history, then run (use for fresh test runs)
+python main.py --reset --dry-run         # clear logs/temp/history, generate + print only
+python main.py --dry-run                 # generate + print; no Discord or Facebook calls
+python main.py --resend-pending          # re-send pending drafts after a bot crash
 python main.py --force-slots 2026-03-17  # use the week of a specific date
 ```
+
+`--reset` clears: `run_log.json`, `topic_history.json`, `media_log.json`, `media/temp/*`
 
 ---
 
@@ -49,12 +53,12 @@ fb-autoposter/
 │   ├── trimmed/          # ffmpeg-trimmed video output
 │   └── temp/             # Pexels images downloaded per run (auto-cleaned after 7 days)
 └── agents/
-    ├── generator.py      # generate_project_story_post(), generate_maintenance_post()
-    ├── validator.py      # validate_post() → {approved, score, feedback, breakdown}
+    ├── generator.py      # generate_project_story_post(), generate_maintenance_post(), generate_saves_post()
+    ├── validator.py      # validate_post() → {approved, score, feedback, breakdown}  (6 dimensions)
     ├── media_analyzer.py # analyze_next_project(), analyze_project(), log_used_project()
     ├── video_editor.py   # edit_video() → trims video, returns content_context
     ├── topic_picker.py   # pick_topics(n) → list of post_context dicts
-    └── pexels.py         # fetch_image(search_query) → {image_url, image_path, photographer}
+    └── pexels.py         # fetch_image(search_query, context="") → {image_url, image_path, photographer}
 ```
 
 ---
@@ -74,15 +78,17 @@ fb-autoposter/
 
 ## Weekly schedule slots
 
-| Day       | Time  | Branch |
-|-----------|-------|--------|
-| Monday    | 10:00 | A (project story) |
-| Wednesday | 11:00 | B (maintenance tip) |
-| Thursday  | 11:00 | B (maintenance tip) |
-| Friday    | 10:00 | A (project story) |
-| Saturday  | 12:00 | B (maintenance tip) |
+4 posts/week. Days and times tuned for peak Facebook engagement (Tue+Sun high-engagement days, 7–9am window).
 
-If the inbox has 0 projects, all 5 slots become Branch B. If 1 project, Monday goes to A and Friday flips to B.
+| Day     | Time  | Branch |
+|---------|-------|--------|
+| Monday  | 07:30 | A (project story) |
+| Tuesday | 08:00 | B (maintenance tip) |
+| Friday  | 08:00 | A (project story) |
+| Sunday  | 09:00 | C (saves post — cheat sheet / checklist / top-5) |
+
+Sunday (Branch C) is always a saves-optimized post regardless of inbox count.
+If the inbox has 0 projects: Mon+Tue+Fri → B, Sun → C. If 1 project: Mon → A, Tue+Fri → B, Sun → C.
 
 ---
 
@@ -91,7 +97,8 @@ If the inbox has 0 projects, all 5 slots become Branch B. If 1 project, Monday g
 ```python
 # Generators
 generate_project_story_post(media_context: dict) -> dict  # copy, hashtags, media_type, project_name
-generate_maintenance_post(maintenance_context: dict) -> dict  # copy, hashtags, topic, image_path, photographer
+generate_maintenance_post(maintenance_context: dict) -> dict  # copy, hashtags, topic, image_path
+generate_saves_post(topic_context: dict) -> dict  # copy, hashtags, topic, image_path  (Branch C)
 
 # Validator
 validate_post(post: str) -> dict  # {approved: bool, score: float, feedback: str, breakdown: dict}
@@ -102,8 +109,8 @@ analyze_project(project_dir) -> dict | None               # media_context
 log_used_project(project_name, before_image, after_image, post_id="")
 
 # Topics / Pexels
-pick_topics(n=3) -> list[dict]         # returns n post_context dicts
-fetch_image(search_query) -> dict      # {image_url, image_path, photographer, pexels_url}
+pick_topics(n=3) -> list[dict]                          # returns n post_context dicts (copy generated before image fetch)
+fetch_image(search_query, context="") -> dict           # {image_url, image_path, photographer, pexels_url}
 
 # Queue
 add_post(post_context, branch, scheduled_time, media_context=None) -> str  # post_id
@@ -131,8 +138,9 @@ DISCORD_BOT_TOKEN
 DISCORD_CHANNEL_ID
 DISCORD_OWNER_ID
 FACEBOOK_PAGE_ID
-FACEBOOK_ACCESS_TOKEN       # use the never-expire Page token (not the 60-day user token)
-FACEBOOK_API_VERSION        # defaults to v19.0
+FACEBOOK_ACCESS_TOKEN          # use the never-expire Page token (not the 60-day user token)
+FACEBOOK_API_VERSION           # defaults to v19.0
+DISCORD_APPROVAL_TIMEOUT       # optional: seconds before bot shuts down waiting (default: wait forever)
 ```
 
 ---
@@ -153,6 +161,12 @@ inbox/
 ## Known behaviour notes
 
 - `discord_bot._check_done()` uses `terminal = {"approved", "discarded"}`. `main.py` prunes resolved posts (`scheduled/posted/failed`) from the queue before each run so the bot can close properly.
-- `pick_topics()` handles topic generation + Pexels fetch + post generation internally. `main.py` calls `validate_post()` separately on the returned post_contexts to get scores for `new_post_entry()`.
+- `pick_topics()` generates copy **first** (with empty image), then fetches the Pexels image scored against that copy for relevance. `post_angle` is included in the returned dict for Branch C reuse.
+- `fetch_image(search_query, context)` passes the post copy to Claude Vision so it picks the photo that best illustrates what the post actually says, not just a generic bathroom photo.
+- `remedia` for Branch B/C swaps the image only — copy is never regenerated. Notes typed after `remedia` are used directly as the Pexels search query (e.g. `remedia dirty exhaust fan`).
+- `get_season_context()` in `config.py` returns the current Toronto season + weather note; injected into every generator prompt so content stays seasonally relevant.
+- Posts are sent to Discord one at a time (sequential flow). After each approve/discard, `_check_done()` advances to the next pending post.
+- Discord send failures (e.g. broken pipe) are retried automatically up to 3 times with 2s/4s backoff before giving up.
 - Projects are marked as used and moved to `processed/` immediately after `analyze_project()`, not after approval, to prevent reuse if the bot restarts mid-run.
-- Facebook publishing is batched: `_publish_approved_posts()` runs after `run_approval_flow()` returns, not inline on each approval. The share kit is still sent to Discord immediately by the bot.
+- Facebook publishing is batched: `_publish_approved_posts()` runs after `run_approval_flow()` returns, not inline on each approval.
+- After approval, Discord shows only `✅ Scheduled to your Facebook Page — [day date @ time]` — no copy is re-pasted.

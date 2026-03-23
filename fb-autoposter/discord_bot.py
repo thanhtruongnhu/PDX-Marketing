@@ -64,11 +64,12 @@ SEP = "━" * 32
 
 # Maps validator dimension keys → human-readable labels for the draft message
 _DIMENSION_LABELS = {
-    "hook_strength": "Hook",
-    "clarity":       "Clarity",
-    "cta":           "CTA",
-    "tone_match":    "Tone",
-    "length":        "Length",
+    "hook_strength":  "Hook",
+    "clarity":        "Clarity",
+    "cta":            "CTA",
+    "tone_match":     "Tone",
+    "length":         "Length",
+    "value_vs_pitch": "Value",
 }
 
 
@@ -127,7 +128,7 @@ def _fmt_breakdown(breakdown: dict) -> str:
     return "  ".join(parts)
 
 
-def _build_draft_text(entry: dict, revision_label: str = "") -> str:
+def _build_draft_text(entry: dict, revision_label: str = "", position_label: str = "") -> str:
     branch    = entry["branch"]
     post_ctx  = entry["post_context"]
     score     = entry.get("last_score", 0.0)
@@ -137,11 +138,12 @@ def _build_draft_text(entry: dict, revision_label: str = "") -> str:
     hashtags  = " ".join(post_ctx.get("hashtags", []))
     bd_str    = _fmt_breakdown(breakdown)
     rev_sfx   = f" — {revision_label}" if revision_label else ""
+    pos_sfx   = f"  ·  {position_label}" if position_label else ""
 
     if branch == "A":
         header = (
             f"{SEP}\n"
-            f"📸 Project Story Draft{rev_sfx}\n"
+            f"📸 Project Story Draft{rev_sfx}{pos_sfx}\n"
             f"Scheduled: {sched_str}\n"
             f"Project: {post_ctx.get('project_name', 'Unknown')}\n"
             f"Media: {post_ctx.get('media_type', 'images')}\n"
@@ -153,10 +155,10 @@ def _build_draft_text(entry: dict, revision_label: str = "") -> str:
             "❌ reject [your notes]\n"
             "🖼️ remedia [your notes]"
         )
-    else:
+    elif branch == "C":
         header = (
             f"{SEP}\n"
-            f"🏠 Maintenance Tip Draft{rev_sfx}\n"
+            f"💾 Saves Post Draft{rev_sfx}{pos_sfx}\n"
             f"Scheduled: {sched_str}\n"
             f"Topic: {post_ctx.get('topic', 'Unknown')}\n"
             f"{SEP}"
@@ -164,7 +166,22 @@ def _build_draft_text(entry: dict, revision_label: str = "") -> str:
         commands = (
             "Reply with:\n"
             "✅ approve\n"
-            "❌ reject [your notes]"
+            "❌ reject [your notes]\n"
+            "🖼️ remedia [your notes]"
+        )
+    else:
+        header = (
+            f"{SEP}\n"
+            f"🏠 Maintenance Tip Draft{rev_sfx}{pos_sfx}\n"
+            f"Scheduled: {sched_str}\n"
+            f"Topic: {post_ctx.get('topic', 'Unknown')}\n"
+            f"{SEP}"
+        )
+        commands = (
+            "Reply with:\n"
+            "✅ approve\n"
+            "❌ reject [your notes]\n"
+            "🖼️ remedia [your notes]"
         )
 
     score_line = f"Validator Score: {score:.1f}/10"
@@ -257,15 +274,7 @@ class DiscordApprovalBot(discord.Client):
             await self.close()
             return
 
-        for entry in pending:
-            if entry["status"] == "max_revisions":
-                await self._resend_max_revisions(entry)
-            else:
-                rev = entry.get("revision_count", 0)
-                label = f"Revision {rev}" if rev else ""
-                await self._send_draft(entry, revision_label=label)
-
-        await self._check_done()
+        await self._send_next_pending()
 
     async def on_message(self, message: discord.Message):
         if message.channel.id != DISCORD_CHANNEL_ID:
@@ -331,15 +340,9 @@ class DiscordApprovalBot(discord.Client):
         elif lower.startswith("reject"):
             await self._handle_reject(entry, queue, text[6:].strip())
         elif lower.startswith("remedia"):
-            if entry["branch"] == "A":
-                await self._handle_remedia(entry, queue, text[7:].strip())
-            else:
-                await message.channel.send(
-                    "`remedia` is only available for project story posts.\n"
-                    "Reply with: `approve` | `reject [notes]`"
-                )
+            await self._handle_remedia(entry, queue, text[7:].strip())
         else:
-            tip = " | `remedia [notes]`" if entry["branch"] == "A" else ""
+            tip = " | `remedia [notes]`"
             await message.channel.send(
                 "Sorry, I didn't understand that. Please reply with:\n"
                 f"`approve` | `reject [notes]`{tip}"
@@ -347,37 +350,52 @@ class DiscordApprovalBot(discord.Client):
 
     # ── Sending helpers ────────────────────────────────────────────────────────
 
-    async def _send_draft(self, entry: dict, revision_label: str = "") -> discord.Message:
-        """Format and send a draft message with any media attachments."""
-        text  = _build_draft_text(entry, revision_label)
+    async def _send_draft(self, entry: dict, revision_label: str = "", position_label: str = "") -> discord.Message:
+        """Format and send a draft message with any media attachments. Retries on connection errors."""
+        text  = _build_draft_text(entry, revision_label, position_label)
         files = self._collect_attachments(entry)
 
-        # Discord limit: 2000 chars per message. If over, split header+body / footer.
-        if len(text) > 1900:
-            split = text.rfind(SEP)
-            if split > 0:
-                first = await self._channel.send(text[:split].rstrip(), files=files)
-                msg   = await self._channel.send(text[split:])
-                # Map both message IDs so replies to either part are routed correctly.
-                self._msg_to_post[first.id] = entry["post_id"]
-            else:
-                first = await self._channel.send(text[:1900], files=files)
-                msg   = await self._channel.send(text[1900:2000])
-                self._msg_to_post[first.id] = entry["post_id"]
-        else:
-            msg = await self._channel.send(text, files=files)
+        for attempt in range(1, 4):
+            try:
+                # Discord limit: 2000 chars per message. If over, split header+body / footer.
+                if len(text) > 1900:
+                    split = text.rfind(SEP)
+                    if split > 0:
+                        first = await self._channel.send(text[:split].rstrip(), files=files)
+                        msg   = await self._channel.send(text[split:])
+                        self._msg_to_post[first.id] = entry["post_id"]
+                    else:
+                        first = await self._channel.send(text[:1900], files=files)
+                        msg   = await self._channel.send(text[1900:2000])
+                        self._msg_to_post[first.id] = entry["post_id"]
+                else:
+                    msg = await self._channel.send(text, files=files)
 
-        self._msg_to_post[msg.id] = entry["post_id"]
-        queue = _load_queue()
-        _update_post(queue, entry["post_id"], {"discord_message_id": msg.id})
-        _save_queue(queue)
-        log.info("Sent draft for %s  msg_id=%d", entry["post_id"][:8], msg.id)
-        return msg
+                self._msg_to_post[msg.id] = entry["post_id"]
+                queue = _load_queue()
+                _update_post(queue, entry["post_id"], {"discord_message_id": msg.id})
+                _save_queue(queue)
+                log.info("Sent draft for %s  msg_id=%d", entry["post_id"][:8], msg.id)
+                return msg
 
-    async def _resend_max_revisions(self, entry: dict):
+            except Exception as exc:
+                if attempt < 3:
+                    wait = 2 ** attempt  # 2s, 4s
+                    log.warning(
+                        "Send failed for %s (attempt %d/3): %s — retrying in %ds",
+                        entry["post_id"][:8], attempt, exc, wait,
+                    )
+                    await asyncio.sleep(wait)
+                    files = self._collect_attachments(entry)  # re-open file handles
+                else:
+                    log.error("Failed to send draft for %s after 3 attempts: %s", entry["post_id"][:8], exc)
+                    raise
+
+    async def _resend_max_revisions(self, entry: dict, position_label: str = ""):
         """Re-send the max-revisions prompt on bot restart."""
+        pos_line = f"  ·  {position_label}" if position_label else ""
         msg = await self._channel.send(
-            f"⚠️ **Revision limit reached** for this post:\n"
+            f"⚠️ **Revision limit reached**{pos_line}\n"
             f"> {entry['post_context'].get('topic') or entry['post_context'].get('project_name', entry['post_id'])}\n\n"
             f"Reply with: `approve` / `discard` / `override [new copy]`"
         )
@@ -411,7 +429,8 @@ class DiscordApprovalBot(discord.Client):
         _update_post(queue, entry["post_id"], {"status": "approved"})
         _save_queue(queue)
         self.approved_posts.append(entry["post_context"])
-        await self._channel.send(_build_share_kit_text(entry))
+        sched = _fmt_scheduled(entry.get("scheduled_time", ""))
+        await self._channel.send(f"✅ Scheduled to your Facebook Page — {sched}")
         log.info("Post %s approved", entry["post_id"][:8])
         await self._check_done()
 
@@ -459,28 +478,30 @@ class DiscordApprovalBot(discord.Client):
             return
 
         new_rev = rev + 1
+        rtype   = "remedia" if entry["branch"] == "A" else "reimage"
         history = list(entry.get("feedback_history", []))
-        history.append({"round": new_rev, "notes": notes, "type": "remedia"})
+        history.append({"round": new_rev, "notes": notes, "type": rtype})
         _update_post(queue, entry["post_id"], {
             "revision_count": new_rev,
             "feedback_history": history,
         })
         _save_queue(queue)
 
-        await self._channel.send(
-            f"🔄 Revision {new_rev} (new media) in progress — based on your note: *\"{notes}\"*\n"
-            f"Re-running media analysis…"
-        )
+        label = "new media" if entry["branch"] == "A" else "new image"
+        await self._channel.send(f"🔄 Revision {new_rev} ({label}) in progress…")
         try:
-            updated = await asyncio.to_thread(self._rerun_with_new_media, entry, notes)
+            if entry["branch"] == "A":
+                updated = await asyncio.to_thread(self._rerun_with_new_media, entry, notes)
+            else:
+                updated = await asyncio.to_thread(self._reimage_branch_bc, entry, notes)
         except Exception as exc:
-            log.error("Re-media failed: %s", exc)
-            await self._channel.send(f"❌ Re-media failed: {exc}")
+            log.error("Remedia failed: %s", exc)
+            await self._channel.send(f"❌ Remedia failed: {exc}")
             return
 
         _update_post(queue, entry["post_id"], {
             "post_context":    updated["post_context"],
-            "media_context":   updated["media_context"],
+            "media_context":   updated.get("media_context", entry.get("media_context")),
             "last_score":      updated["last_score"],
             "score_breakdown": updated.get("score_breakdown", {}),
         })
@@ -488,7 +509,7 @@ class DiscordApprovalBot(discord.Client):
 
         queue = _load_queue()
         fresh = _find_post(queue, entry["post_id"])
-        await self._send_draft(fresh, revision_label=f"Revision {new_rev} (new media)")
+        await self._send_draft(fresh, revision_label=f"Revision {new_rev} ({label})")
 
     async def _handle_override(self, entry: dict, queue: dict, custom_copy: str):
         entry["post_context"]["copy"] = custom_copy
@@ -498,8 +519,8 @@ class DiscordApprovalBot(discord.Client):
         })
         _save_queue(queue)
         self.approved_posts.append(entry["post_context"])
-        await self._channel.send("✅ Post approved with your custom copy.")
-        await self._channel.send(_build_share_kit_text(entry))
+        sched = _fmt_scheduled(entry.get("scheduled_time", ""))
+        await self._channel.send(f"✅ Approved with custom copy — scheduled for Facebook: {sched}")
         log.info("Post %s approved via override", entry["post_id"][:8])
         await self._check_done()
 
@@ -530,7 +551,7 @@ class DiscordApprovalBot(discord.Client):
 
     def _regenerate_copy(self, entry: dict, feedback_notes: str) -> dict:
         """Regenerate post copy with reviewer feedback. Returns updated fields."""
-        from agents.generator import generate_maintenance_post, generate_project_story_post
+        from agents.generator import generate_maintenance_post, generate_project_story_post, generate_saves_post
         from agents.validator import validate_post
 
         media_ctx = dict(entry.get("media_context") or {})
@@ -542,6 +563,13 @@ class DiscordApprovalBot(discord.Client):
                 + f"\n\nRevision feedback: {feedback_notes}"
             )
             result = generate_project_story_post(ctx, verbose=False)
+        elif entry["branch"] == "C":
+            ctx = dict(media_ctx)
+            ctx["post_angle"] = (
+                ctx.get("post_angle", "")
+                + f". Revision feedback: {feedback_notes}"
+            )
+            result = generate_saves_post(ctx, verbose=False)
         else:
             ctx = dict(media_ctx)
             ctx["post_angle"] = (
@@ -587,16 +615,76 @@ class DiscordApprovalBot(discord.Client):
             "score_breakdown": validation.get("breakdown", {}),
         }
 
+    def _reimage_branch_bc(self, entry: dict, notes: str) -> dict:
+        """Swap Pexels image for Branch B or C. Copy text stays unchanged."""
+        from agents.pexels import fetch_image
+
+        media_ctx = dict(entry.get("media_context") or {})
+        topic     = media_ctx.get("topic") or entry["post_context"].get("topic", "")
+        copy_text = entry["post_context"].get("copy", topic)
+
+        # Use notes as the search query directly (user is describing the desired image),
+        # fall back to topic if no notes given.
+        search_query = notes.strip() if notes else topic
+        img = fetch_image(search_query, context=copy_text)
+
+        new_image_path = img.get("image_path", "")
+        new_image_url  = img.get("image_url", "")
+
+        # Update both media_context AND post_context image fields so _collect_attachments
+        # picks up the new image (it checks post_ctx["image_path"] first).
+        media_ctx["image_path"] = new_image_path
+        media_ctx["image_url"]  = new_image_url
+
+        post_ctx = dict(entry["post_context"])  # shallow copy — text/hashtags unchanged
+        post_ctx["image_path"] = new_image_path
+        post_ctx["image_url"]  = new_image_url
+
+        return {
+            "post_context":    post_ctx,
+            "media_context":   media_ctx,
+            "last_score":      entry.get("last_score", 0),
+            "score_breakdown": entry.get("score_breakdown", {}),
+        }
+
+    # ── Sequential flow ────────────────────────────────────────────────────────
+
+    async def _send_next_pending(self) -> None:
+        """Send the next pending post. Called on startup and after each post resolves."""
+        queue     = _load_queue()
+        all_posts = queue["posts"]
+        total     = len(all_posts)
+        done      = sum(1 for p in all_posts if p["status"] in {"approved", "discarded"})
+
+        pending = [p for p in all_posts if p["status"] in ("pending", "max_revisions")]
+        if not pending:
+            return  # _check_done() handles closure
+
+        entry          = pending[0]
+        position_label = f"Post {done + 1} of {total}"
+
+        if entry["status"] == "max_revisions":
+            await self._resend_max_revisions(entry, position_label)
+        else:
+            rev = entry.get("revision_count", 0)
+            await self._send_draft(
+                entry,
+                revision_label=f"Revision {rev}" if rev else "",
+                position_label=position_label,
+            )
+
     # ── Completion check ───────────────────────────────────────────────────────
 
     async def _check_done(self):
-        """Close the bot if every post in the queue is in a terminal state."""
+        """Close the bot if every post is resolved; otherwise advance to the next post."""
         queue    = _load_queue()
         terminal = {"approved", "discarded"}
         if queue["posts"] and all(p["status"] in terminal for p in queue["posts"]):
             log.info("All posts resolved — shutting down")
             self._done_event.set()
             await self.close()
+        else:
+            await self._send_next_pending()
 
 
 # ── Public API ─────────────────────────────────────────────────────────────────

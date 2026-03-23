@@ -164,10 +164,20 @@ def pick_topics(n: int = 3) -> list:
 
     post_contexts = []
     for t in topics:
-        # --- Fetch Pexels image ---
+        # --- Generate copy first (image fetched after, using copy for scoring) ---
+        log.info("Generating post for: %s", t["topic"])
+        post_ctx = generate_maintenance_post({
+            "topic":      t["topic"],
+            "post_angle": t["post_angle"],
+            "image_path": "",
+            "image_url":  "",
+        })
+
+        # --- Fetch Pexels image scored against the actual copy ---
         log.info("Fetching Pexels image for: %s", t["search_query"])
+        copy_text = post_ctx.get("copy", t["topic"])
         try:
-            img = fetch_image(t["search_query"])
+            img = fetch_image(t["search_query"], context=copy_text)
         except Exception as exc:
             log.warning(
                 "Image fetch failed for %r: %s — using empty placeholder",
@@ -181,15 +191,9 @@ def pick_topics(n: int = 3) -> list:
                 "pexels_url": "",
             }
 
-        maintenance_context = {
-            "topic": t["topic"],
-            "post_angle": t["post_angle"],
-            **img,
-        }
-
-        # --- Generate post ---
-        log.info("Generating post for: %s", t["topic"])
-        post_ctx = generate_maintenance_post(maintenance_context)
+        post_ctx["image_path"] = img.get("image_path", "")
+        post_ctx["image_url"]  = img.get("image_url", "")
+        post_ctx["post_angle"] = t["post_angle"]   # preserved for Branch C reuse
         post_contexts.append(post_ctx)
 
     _record_topics(topics)

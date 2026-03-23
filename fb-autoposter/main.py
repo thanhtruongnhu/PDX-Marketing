@@ -7,14 +7,14 @@ publish approved posts to Facebook.
 ════════════════════════════════════════
 CRON SETUP
 ════════════════════════════════════════
-Run once per week on Monday at 8:00am — gives time to approve posts before
-the 10:00am Monday slot publishes.
+Run once per week on Monday at 7:00am — gives time to approve posts before
+the 7:30am Monday slot publishes.
 
     crontab -e
 
 Add this line (adjust the path to match your installation):
 
-    0 8 * * 1 /usr/bin/python3 /path/to/fb-autoposter/main.py >> /path/to/fb-autoposter/logs/cron.log 2>&1
+    0 7 * * 1 /usr/bin/python3 /path/to/fb-autoposter/main.py >> /path/to/fb-autoposter/logs/cron.log 2>&1
 
 Verify it is registered:
 
@@ -62,22 +62,23 @@ log = logging.getLogger("main")
 
 # ── Weekly slot definitions ──────────────────────────────────────────────────────
 #
-# The 5 fixed time slots, in schedule order.
-# day_offset is days from Monday (0=Mon, 2=Wed, 3=Thu, 4=Fri, 5=Sat).
+# 4 fixed time slots tuned for peak Facebook engagement (Tue+Sun high-engagement
+# days, 7–9am morning window). Slot index 3 (Sunday) is always Branch C.
+# day_offset is days from Monday (0=Mon, 1=Tue, 4=Fri, 6=Sun).
 #
 _WEEK_SLOTS = [
-    (0, "10:00"),   # Monday    → slot index 0
-    (2, "11:00"),   # Wednesday → slot index 1
-    (3, "11:00"),   # Thursday  → slot index 2
-    (4, "10:00"),   # Friday    → slot index 3
-    (5, "12:00"),   # Saturday  → slot index 4
+    (0, "07:30"),   # Monday    → slot index 0
+    (1, "08:00"),   # Tuesday   → slot index 1
+    (4, "08:00"),   # Friday    → slot index 2
+    (6, "09:00"),   # Sunday    → slot index 3  (always Branch C)
 ]
 
 # Which slot indices each branch claims, keyed by branch_a_count.
+# Slot index 3 (Sunday) is always Branch C and never included here.
 _SLOT_PLAN: dict[int, tuple[list[int], list[int]]] = {
-    2: ([0, 3],    [1, 2, 4]),     # branch_a_count=2: Mon+Fri → A, rest → B
-    1: ([0],       [1, 2, 3, 4]), # branch_a_count=1: Mon → A, rest → B
-    0: ([],        [0, 1, 2, 3, 4]),  # branch_a_count=0: all → B
+    2: ([0, 2], [1]),        # branch_a_count=2: Mon+Fri → A, Tue → B
+    1: ([0],    [1, 2]),     # branch_a_count=1: Mon → A, Tue+Fri → B
+    0: ([],     [0, 1, 2]),  # branch_a_count=0: all three → B
 }
 
 
@@ -121,7 +122,7 @@ def _validate_config() -> None:
 # ── Slot computation ─────────────────────────────────────────────────────────────
 
 def _compute_week_times(monday: datetime) -> list[str]:
-    """Return the 5 ISO-8601 datetime strings for the week starting on monday."""
+    """Return the 4 ISO-8601 datetime strings for the week starting on monday."""
     times = []
     for day_offset, time_str in _WEEK_SLOTS:
         h, m = map(int, time_str.split(":"))
@@ -306,9 +307,8 @@ def _build_branch_b_entries(
         # topic_picker doesn't expose the full maintenance_context; reconstruct
         # a minimal media_context so discord_bot._regenerate_copy() can work.
         media_ctx = {
-            "topic":        post_ctx.get("topic", ""),
-            "image_path":   post_ctx.get("image_path", ""),
-            "photographer": post_ctx.get("photographer", ""),
+            "topic":      post_ctx.get("topic", ""),
+            "image_path": post_ctx.get("image_path", ""),
         }
 
         entry = new_post_entry(
@@ -326,6 +326,86 @@ def _build_branch_b_entries(
         )
 
     return entries
+
+
+# ── Branch C generation ──────────────────────────────────────────────────────────
+
+def _build_branch_c_entry(scheduled_time: str) -> dict | None:
+    """
+    Pick a topic, generate, and validate a Branch C saves-optimized post
+    (cheat sheet / checklist / top-5 list) for the Sunday slot.
+
+    Reuses topic_picker.pick_topics(n=1) for topic selection and Pexels image
+    fetch, then calls generate_saves_post() instead of generate_maintenance_post().
+
+    Returns a new_post_entry dict or None on failure.
+    """
+    from agents.topic_picker import pick_topics
+    from agents.generator import generate_saves_post
+    from agents.validator import validate_post
+    from discord_bot import new_post_entry
+
+    log.info("── Branch C: generating saves post for Sunday…")
+    try:
+        # pick_topics returns a maintenance post_context; use only the topic metadata
+        # and re-generate with the saves-optimized prompt.
+        topic_contexts = pick_topics(n=1)
+        if not topic_contexts:
+            log.error("pick_topics returned no topics for Branch C.")
+            return None
+        topic_ctx = topic_contexts[0]
+
+        # Generate saves copy first (image_path may be stale from maintenance copy context).
+        post_ctx = generate_saves_post({
+            "topic":      topic_ctx.get("topic", ""),
+            "post_angle": topic_ctx.get("post_angle", ""),
+            "image_path": "",
+            "image_url":  "",
+        })
+
+        # Re-fetch image scored against the actual saves copy for better alignment.
+        from agents.pexels import fetch_image
+        img = fetch_image(
+            topic_ctx.get("topic", "bathroom renovation"),
+            context=post_ctx.get("copy", ""),
+        )
+        post_ctx["image_path"] = img.get("image_path", "")
+        post_ctx["image_url"]  = img.get("image_url", "")
+    except Exception as exc:
+        log.error("Branch C generation failed: %s", exc)
+        return None
+
+    validation = validate_post(post_ctx["copy"])
+
+    if not validation["approved"]:
+        log.warning(
+            "Branch C '%s' did not reach score threshold (score=%.1f) — queuing anyway.",
+            post_ctx.get("topic", "?"), validation["score"],
+        )
+        post_ctx["validator_warning"] = (
+            f"Did not reach score threshold (final score: {validation['score']:.1f})"
+        )
+
+    media_ctx = {
+        "topic":      post_ctx.get("topic", ""),
+        "post_angle": topic_ctx.get("post_angle", ""),
+        "image_path": post_ctx.get("image_path", ""),
+        "image_url":  post_ctx.get("image_url", ""),
+    }
+
+    entry = new_post_entry(
+        branch="C",
+        post_context=post_ctx,
+        media_context=media_ctx,
+        scheduled_time=scheduled_time,
+        last_score=validation["score"],
+        score_breakdown=validation.get("breakdown", {}),
+    )
+    log.info(
+        "✅ Branch C ready: %-40s  score=%.1f  slot=%s",
+        post_ctx.get("topic", "?"), validation["score"], scheduled_time,
+    )
+    return entry
 
 
 # ── Facebook publishing ──────────────────────────────────────────────────────────
@@ -393,6 +473,44 @@ def _notify_discord(message: str) -> None:
         )
     except Exception as exc:
         log.warning("Could not send Discord notification: %s", exc)
+
+
+# ── First-hour engagement reminder ───────────────────────────────────────────────
+
+def _send_engagement_reminder(post_ids: list[str]) -> None:
+    """
+    After publishing, notify Discord to engage with each post within the first
+    hour of its publish time — early engagement significantly boosts reach.
+    """
+    if not QUEUE_FILE.exists():
+        return
+    try:
+        queue = json.loads(QUEUE_FILE.read_text())
+    except (json.JSONDecodeError, OSError):
+        return
+
+    scheduled = [
+        p for p in queue["posts"]
+        if p["post_id"] in post_ids and p["status"] in ("scheduled", "posted")
+    ]
+    if not scheduled:
+        return
+
+    lines = [
+        "📣 **First-hour engagement reminder**",
+        "Like, comment, or reply to each post within 60 min of its publish time — "
+        "early engagement is what tells Facebook's algorithm to boost reach.\n",
+    ]
+    for p in scheduled:
+        label = (
+            p["post_context"].get("project_name")
+            or p["post_context"].get("topic")
+            or p["post_id"][:8]
+        )
+        branch = p.get("branch", "?")
+        lines.append(f"• **[Branch {branch}] {label}** → {p['scheduled_time']}")
+
+    _notify_discord("\n".join(lines))
 
 
 # ── Dry-run printer ──────────────────────────────────────────────────────────────
@@ -463,6 +581,22 @@ async def main(args: argparse.Namespace) -> None:
     _setup_logging(run_date, dry_run=args.dry_run)
     log.info("════ fb-autoposter weekly run — %s ════", run_date)
 
+    # ── --reset: wipe logs and temp for a clean slate ─────────────────────────
+    if args.reset:
+        RUN_LOG.write_text("[]")
+        (_HERE / "topic_history.json").write_text('{"history": []}')
+        (_HERE / "media_log.json").write_text('{"used_projects": []}')
+        removed = 0
+        if TEMP_DIR.exists():
+            for f in TEMP_DIR.iterdir():
+                if f.is_file():
+                    f.unlink()
+                    removed += 1
+        log.info(
+            "--reset: cleared run_log.json, topic_history.json, media_log.json, %d temp file(s)",
+            removed,
+        )
+
     # ── STEP 1: Startup checks ───────────────────────────────────────────────
     if not args.resend_pending:
         _validate_config()
@@ -500,7 +634,7 @@ async def main(args: argparse.Namespace) -> None:
         today  = datetime.now()
         monday = today - timedelta(days=today.weekday())
 
-    week_times = _compute_week_times(monday)  # 5 ISO datetime strings
+    week_times = _compute_week_times(monday)  # 4 ISO datetime strings
 
     # ── STEP 3: Check inbox → determine branch_a_count ───────────────────────
     projects = _inbox_projects()
@@ -527,6 +661,7 @@ async def main(args: argparse.Namespace) -> None:
     a_indices, b_indices = _SLOT_PLAN[branch_a_count]
     a_slots = [week_times[i] for i in a_indices]
     b_slots = [week_times[i] for i in b_indices]
+    c_slot  = week_times[3]   # Sunday is always Branch C
 
     # Inbox warning level for run log + Discord notification
     inbox_warning: str | None = None
@@ -551,13 +686,21 @@ async def main(args: argparse.Namespace) -> None:
 
     if not args.branch_a_only:
         maintenance_count = len(b_slots)
-        log.info("── Branch B: generating %d post(s)…", maintenance_count)
-        b_entries = _build_branch_b_entries(maintenance_count, b_slots)
-        all_entries.extend(b_entries)
-        topics_used = [
-            e["post_context"].get("topic", "") for e in b_entries
-        ]
-        log.info("✅ Branch B: %d post(s) generated", len(b_entries))
+        if maintenance_count > 0:
+            log.info("── Branch B: generating %d post(s)…", maintenance_count)
+            b_entries = _build_branch_b_entries(maintenance_count, b_slots)
+            all_entries.extend(b_entries)
+            topics_used = [
+                e["post_context"].get("topic", "") for e in b_entries
+            ]
+            log.info("✅ Branch B: %d post(s) generated", len(b_entries))
+
+        log.info("── Branch C: generating saves post for Sunday…")
+        c_entry = _build_branch_c_entry(c_slot)
+        if c_entry:
+            all_entries.append(c_entry)
+            topics_used.append(c_entry["post_context"].get("topic", ""))
+            log.info("✅ Branch C: 1 post generated")
 
     log.info("Total posts this run: %d", len(all_entries))
 
@@ -590,12 +733,16 @@ async def main(args: argparse.Namespace) -> None:
         log.info("Approval flow complete. Publishing approved posts to Facebook…")
         _publish_approved_posts(run_post_ids)
 
+        # Remind the operator to engage within the first hour of each publish time.
+        _send_engagement_reminder(run_post_ids)
+
     # ── STEP 7: Cleanup + run log ─────────────────────────────────────────────
     _cleanup_temp()
     _write_run_log({
         "run_date":       run_date,
         "branch_a_posts": len([e for e in all_entries if e["branch"] == "A"]),
         "branch_b_posts": len([e for e in all_entries if e["branch"] == "B"]),
+        "branch_c_posts": len([e for e in all_entries if e["branch"] == "C"]),
         "inbox_warning":  inbox_warning,
         "post_ids":       run_post_ids,
         "topics_used":    topics_used,
@@ -618,6 +765,8 @@ def _parse_args() -> argparse.Namespace:
             "  python main.py --branch-b-only     # maintenance tip posts only\n"
             "  python main.py --resend-pending    # re-send pending posts to Discord\n"
             "  python main.py --force-slots 2026-03-17  # use week of given date\n"
+            "  python main.py --reset                  # clear logs/temp, then run\n"
+            "  python main.py --reset --dry-run        # clear logs/temp, then dry run\n"
         ),
     )
     p.add_argument(
@@ -644,6 +793,11 @@ def _parse_args() -> argparse.Namespace:
         "--force-slots",
         metavar="YYYY-MM-DD",
         help="Override slot calculation to use the week containing this date (for testing / catch-up)",
+    )
+    p.add_argument(
+        "--reset",
+        action="store_true",
+        help="Clear run_log.json, topic_history.json, and media/temp/* before running (useful for fresh test runs)",
     )
     return p.parse_args()
 

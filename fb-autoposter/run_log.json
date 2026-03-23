@@ -1,64 +1,20 @@
 [
   {
-    "run_date": "2026-03-18",
+    "run_date": "2026-03-22",
     "branch_a_posts": 1,
-    "branch_b_posts": 4,
+    "branch_b_posts": 2,
+    "branch_c_posts": 1,
     "inbox_warning": "low",
     "post_ids": [
-      "04294300-beeb-4252-88c0-a901a992fdac",
-      "159b07a8-9c7c-4f8f-87ed-13680da9b133",
-      "7388febf-1219-4c9d-9fbb-f3c021839c3f",
-      "e386d7d6-10c0-40b1-98ef-2ad3cac3a930",
-      "3b700097-192c-4000-8058-ab2f98affbb5"
+      "3b68832b-0b41-4d5a-851f-22b967e24a8c",
+      "392d0284-ee1b-4937-abc9-f570e6bd953a",
+      "05b9ca0f-c4aa-45ac-a048-5d7a8af737ca",
+      "1407790a-dd18-48b0-83f9-b5fdf7c25aff"
     ],
     "topics_used": [
-      "Reapply silicone sealant around your bathtub before spring thaw",
-      "Test your bathroom exhaust fan airflow before humid summer arrives",
-      "Seal grout lines in entryway tile to survive winter salt and slush",
-      "Flush and drain outdoor hose bibs before the first hard freeze"
-    ],
-    "projects_used": [
-      "proj-luxury-1"
-    ]
-  },
-  {
-    "run_date": "2026-03-18",
-    "branch_a_posts": 0,
-    "branch_b_posts": 5,
-    "inbox_warning": "empty",
-    "post_ids": [
-      "2e1ec58e-ffd8-4fb9-aa70-150453d70721",
-      "7d920464-5b84-4446-a1ff-02be09620eb6",
-      "6d87038b-60a7-4806-8fb7-303af8294543",
-      "b2df53e8-76ff-4331-9dfa-d3ca6b7bc0d2",
-      "1dad89cf-5763-4b2a-b4af-a43e22615cb8"
-    ],
-    "topics_used": [
-      "Winterize bathroom floor tile to prevent cracking from freeze-thaw cycles",
-      "Unclog and redirect bathroom condensation drip trays before summer humidity",
-      "Replace worn shower door seals to stop slow leaks behind walls",
-      "Clean and reseal natural stone bathroom countertops before winter dryness",
-      "Check basement bathroom backwater valve before spring snowmelt season"
-    ],
-    "projects_used": []
-  },
-  {
-    "run_date": "2026-03-18",
-    "branch_a_posts": 1,
-    "branch_b_posts": 4,
-    "inbox_warning": "low",
-    "post_ids": [
-      "f0acefd3-76c9-4e73-8b52-ae102bc7bdbe",
-      "7ff0a917-b213-4fd4-acd2-7098628594d2",
-      "b2c0824b-46af-41ad-a01d-3d852102b9db",
-      "05b20ba7-d273-4ff8-8209-d3c86508b0db",
-      "fad7c425-d0fa-4b17-bd50-42036ad2d3a6"
-    ],
-    "topics_used": [
-      "Adjust bathroom humidity-activated switches for summer",
-      "Inspect and repair cracked tile caulk around toilet bases",
-      "Prep bathroom plumbing vents on the roof before winter ice buildup",
-      "Clean and treat bathroom tile grout with a mould-resistant sealer before fall"
+      "Replacing bathroom caulking before winter",
+      "Cleaning and testing your bathroom exhaust fan",
+      "Preventing mould behind bathroom tiles during humid GTA summers"
     ],
     "projects_used": [
       "proj-luxury-1"

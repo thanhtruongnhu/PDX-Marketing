@@ -1,0 +1,1033 @@
+2026-03-22 19:04:31,221  INFO     ════ fb-autoposter weekly run — 2026-03-22 ════
+2026-03-22 19:04:31,222  INFO     ✅ Config validated
+2026-03-22 19:04:31,466  INFO     Inbox empty — skipping project story posts this week.
+2026-03-22 19:04:31,466  INFO     ✅ Inbox checked (0 project(s) found)  branch_a_count=0
+2026-03-22 19:04:31,466  INFO     ── Branch B: generating 3 post(s)…
+2026-03-22 19:04:31,552  INFO     Generating 3 Branch B maintenance post(s)…
+2026-03-22 19:04:31,557  INFO     Skipping 0 recently used topics
+2026-03-22 19:04:37,647  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:04:37,677  INFO     Topics selected: ['Recaulk your bathtub before winter moisture sets in', 'Clean and test your bathroom exhaust fan for winter', 'Prevent grout mould caused by summer humidity']
+2026-03-22 19:04:37,677  INFO     Fetching Pexels image for: bathtub caulking replacement bathroom maintenance
+2026-03-22 19:04:41,078  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:04:41,079  INFO       Photo 4030050 — score 8.2
+2026-03-22 19:04:43,740  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:04:43,742  INFO       Photo 4404971 — score 7.0
+2026-03-22 19:04:46,042  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:04:46,044  INFO       Photo 6585741 — score 7.3
+2026-03-22 19:04:48,348  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:04:48,350  INFO       Photo 4405005 — score 8.0
+2026-03-22 19:04:51,011  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:04:51,013  INFO       Photo 6835172 — score 7.5
+2026-03-22 19:04:57,257  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:04:57,259  INFO       Photo 3867618 — score 8.5
+2026-03-22 19:05:00,534  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:05:00,536  INFO       Photo 36650041 — score 8.2
+2026-03-22 19:05:02,811  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:05:02,813  INFO       Photo 5691660 — score 4.2
+2026-03-22 19:05:05,141  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:05:05,142  INFO       Photo 6969997 — score 7.8
+2026-03-22 19:05:07,529  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:05:07,530  INFO       Photo 6653892 — score 8.8
+2026-03-22 19:05:07,738  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathtub_caulking_replacement_bathroom_ma.jpeg
+2026-03-22 19:05:07,738  INFO     Generating post for: Recaulk your bathtub before winter moisture sets in
+2026-03-22 19:05:17,492  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:05:25,879  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:05:25,881  INFO     Fetching Pexels image for: bathroom exhaust fan cleaning maintenance
+2026-03-22 19:05:28,797  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:05:28,798  INFO       Photo 4239123 — score 7.7
+2026-03-22 19:05:31,572  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:05:31,573  INFO       Photo 4239031 — score 8.0
+2026-03-22 19:05:34,940  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:05:34,941  INFO       Photo 5591464 — score 8.0
+2026-03-22 19:05:37,746  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:05:37,747  INFO       Photo 5591461 — score 7.8
+2026-03-22 19:05:43,235  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:05:43,237  INFO       Photo 4239130 — score 7.3
+2026-03-22 19:05:45,693  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:05:45,695  INFO       Photo 4239142 — score 8.0
+2026-03-22 19:05:48,424  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:05:48,426  INFO       Photo 3867607 — score 7.3
+2026-03-22 19:05:51,223  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:05:51,224  INFO       Photo 5591490 — score 7.5
+2026-03-22 19:05:53,680  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:05:53,682  INFO       Photo 3867618 — score 8.5
+2026-03-22 19:05:56,035  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:05:56,037  INFO       Photo 7027795 — score 7.5
+2026-03-22 19:05:56,211  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathroom_exhaust_fan_cleaning_maintenanc.jpeg
+2026-03-22 19:05:56,211  INFO     Generating post for: Clean and test your bathroom exhaust fan for winter
+2026-03-22 19:06:05,726  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:06:14,775  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:06:14,777  INFO     Fetching Pexels image for: shower tile grout mould prevention
+2026-03-22 19:06:17,389  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:06:17,390  INFO       Photo 4194867 — score 6.8
+2026-03-22 19:06:20,202  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:06:20,204  INFO       Photo 5644327 — score 6.8
+2026-03-22 19:06:22,731  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:06:22,733  INFO       Photo 7166939 — score 7.7
+2026-03-22 19:06:25,322  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:06:25,323  INFO       Photo 3990586 — score 8.2
+2026-03-22 19:06:27,780  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:06:27,782  INFO       Photo 3958966 — score 8.2
+2026-03-22 19:06:30,367  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:06:30,369  INFO       Photo 4933253 — score 8.3
+2026-03-22 19:06:32,798  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:06:32,800  INFO       Photo 7031575 — score 7.7
+2026-03-22 19:06:35,469  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:06:35,471  INFO       Photo 7546284 — score 7.8
+2026-03-22 19:06:38,312  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:06:38,314  INFO       Photo 7214728 — score 7.7
+2026-03-22 19:06:41,902  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:06:41,904  INFO       Photo 6316060 — score 7.7
+2026-03-22 19:06:42,062  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_shower_tile_grout_mould_prevention.jpeg
+2026-03-22 19:06:42,062  INFO     Generating post for: Prevent grout mould caused by summer humidity
+2026-03-22 19:06:52,155  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:07:00,958  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:07:00,961  INFO     Saved 3 topics to topic_history.json
+2026-03-22 19:07:09,167  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:07:09,168  INFO     ✅ Branch B ready: Recaulk your bathtub before winter moisture sets in  score=9.1  slot=2026-03-16T07:30
+2026-03-22 19:07:17,854  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:07:17,858  INFO     ✅ Branch B ready: Clean and test your bathroom exhaust fan for winter  score=8.8  slot=2026-03-17T08:00
+2026-03-22 19:07:26,139  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:07:26,141  INFO     ✅ Branch B ready: Prevent grout mould caused by summer humidity  score=8.8  slot=2026-03-20T08:00
+2026-03-22 19:07:26,142  INFO     ✅ Branch B: 3 post(s) generated
+2026-03-22 19:07:26,142  INFO     ── Branch C: generating saves post for Sunday…
+2026-03-22 19:07:26,142  INFO     ── Branch C: generating saves post for Sunday…
+2026-03-22 19:07:26,142  INFO     Skipping 3 recently used topics
+2026-03-22 19:07:29,410  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:07:29,412  INFO     Topics selected: ['Winterize exposed bathroom pipes to prevent freezing']
+2026-03-22 19:07:29,412  INFO     Fetching Pexels image for: bathroom pipes insulation winter home
+2026-03-22 19:07:32,479  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:07:32,480  INFO       Photo 4194862 — score 6.8
+2026-03-22 19:07:34,956  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:07:34,957  INFO       Photo 4048080 — score 7.7
+2026-03-22 19:07:37,240  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:07:37,241  INFO       Photo 7045912 — score 6.8
+2026-03-22 19:07:37,504  INFO     Retrying request to /v1/messages in 0.444155 seconds
+2026-03-22 19:07:40,282  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:07:40,283  INFO       Photo 6933771 — score 7.7
+2026-03-22 19:07:52,356  WARNING  Could not download photo 7086213 for scoring: The read operation timed out
+2026-03-22 19:07:52,358  INFO       Photo 7086213 — score 0.0
+2026-03-22 19:08:04,417  WARNING  Could not download photo 5524223 for scoring: The read operation timed out
+2026-03-22 19:08:04,419  INFO       Photo 5524223 — score 0.0
+2026-03-22 19:08:07,109  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:08:07,111  INFO       Photo 7746090 — score 8.3
+2026-03-22 19:08:09,669  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:08:09,671  INFO       Photo 3616761 — score 4.5
+2026-03-22 19:08:12,642  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:08:12,644  INFO       Photo 4405005 — score 8.2
+2026-03-22 19:08:15,302  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:08:15,304  INFO       Photo 534116 — score 7.0
+2026-03-22 19:08:15,545  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathroom_pipes_insulation_winter_home.jpeg
+2026-03-22 19:08:15,545  INFO     Generating post for: Winterize exposed bathroom pipes to prevent freezing
+2026-03-22 19:08:25,711  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:08:33,619  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:08:33,623  INFO     Saved 1 topics to topic_history.json
+2026-03-22 19:08:41,438  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:08:50,115  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:08:58,104  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:08:58,108  INFO     ✅ Branch C ready: Winterize exposed bathroom pipes to prevent freezing  score=8.4  slot=2026-03-22T09:00
+2026-03-22 19:08:58,109  INFO     ✅ Branch C: 1 post generated
+2026-03-22 19:08:58,109  INFO     Total posts this run: 4
+2026-03-22 19:08:58,590  INFO     Sending 4 draft(s) to Discord for approval…
+2026-03-22 19:08:58,591  WARNING  PyNaCl is not installed, voice will NOT be supported
+2026-03-22 19:08:58,591  WARNING  davey is not installed, voice will NOT be supported
+2026-03-22 19:08:58,591  INFO     logging in using static token
+2026-03-22 19:08:59,388  INFO     Shard ID None has connected to Gateway (Session ID: 9228737bb456db1dc5e247c659520b09).
+2026-03-22 19:09:01,391  INFO     Discord bot online as PDX-Facebook-Bot#4424 (id=1483657828886380685)
+2026-03-22 19:09:01,999  INFO     Sent draft for 70ec7e2b  msg_id=1485415033616990359
+2026-03-22 19:09:02,648  INFO     Sent draft for e81fe534  msg_id=1485415035902754887
+2026-03-22 19:09:03,145  INFO     Sent draft for a70f8f88  msg_id=1485415038549491742
+2026-03-22 19:09:03,990  INFO     Sent draft for 4528938a  msg_id=1485415040906432634
+2026-03-22 19:13:06,728  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:13:16,052  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:13:24,244  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:13:24,759  INFO     Sent draft for 70ec7e2b  msg_id=1485416136379203665
+2026-03-22 19:14:09,412  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:14:19,336  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:14:27,468  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:14:28,138  INFO     Sent draft for 70ec7e2b  msg_id=1485416401794629712
+2026-03-22 19:17:17,516  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:17:25,912  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:17:34,444  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:17:35,086  INFO     Sent draft for 70ec7e2b  msg_id=1485417186024489183
+2026-03-22 19:18:12,804  INFO     Post 70ec7e2b discarded
+2026-03-22 19:19:12,681  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:19:20,704  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:19:29,101  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:19:29,736  INFO     Sent draft for e81fe534  msg_id=1485417666968555722
+2026-03-22 19:22:08,642  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:22:18,063  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:22:25,991  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:22:26,771  INFO     Sent draft for a70f8f88  msg_id=1485418409264152707
+2026-03-22 19:52:26,354  INFO     ════ fb-autoposter weekly run — 2026-03-22 ════
+2026-03-22 19:52:26,354  INFO     ✅ Config validated
+2026-03-22 19:52:26,593  INFO     Inbox empty — skipping project story posts this week.
+2026-03-22 19:52:26,593  INFO     ✅ Inbox checked (0 project(s) found)  branch_a_count=0
+2026-03-22 19:52:26,593  INFO     ── Branch B: generating 3 post(s)…
+2026-03-22 19:52:26,649  INFO     Generating 3 Branch B maintenance post(s)…
+2026-03-22 19:52:26,657  INFO     Skipping 0 recently used topics
+2026-03-22 19:52:33,339  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:52:33,365  INFO     Topics selected: ['Recaulk your bathtub before winter moisture sets in', 'Clean and test your bathroom exhaust fan for winter', 'Prevent grout cracking caused by spring freeze-thaw damage']
+2026-03-22 19:52:33,365  INFO     Fetching Pexels image for: bathtub caulking replacement bathroom maintenance
+2026-03-22 19:52:36,204  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:52:36,206  INFO       Photo 4030050 — score 8.0
+2026-03-22 19:52:38,660  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:52:38,662  INFO       Photo 4404971 — score 7.0
+2026-03-22 19:52:41,836  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:52:41,838  INFO       Photo 6585741 — score 7.3
+2026-03-22 19:52:44,089  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:52:44,091  INFO       Photo 4405005 — score 8.2
+2026-03-22 19:52:46,546  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:52:46,548  INFO       Photo 6835172 — score 7.3
+2026-03-22 19:52:49,208  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:52:49,210  INFO       Photo 3867618 — score 8.5
+2026-03-22 19:52:51,564  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:52:51,566  INFO       Photo 36650041 — score 8.2
+2026-03-22 19:52:54,021  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:52:54,023  INFO       Photo 5691660 — score 4.2
+2026-03-22 19:52:56,378  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:52:56,380  INFO       Photo 6969997 — score 7.7
+2026-03-22 19:52:58,732  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:52:58,735  INFO       Photo 6653892 — score 8.8
+2026-03-22 19:52:58,916  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathtub_caulking_replacement_bathroom_ma.jpeg
+2026-03-22 19:52:58,917  INFO     Generating post for: Recaulk your bathtub before winter moisture sets in
+2026-03-22 19:53:08,766  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:53:17,387  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:53:17,388  INFO     Fetching Pexels image for: bathroom exhaust fan cleaning ventilation
+2026-03-22 19:53:20,337  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:53:20,339  INFO       Photo 1650031 — score 5.3
+2026-03-22 19:53:22,898  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:53:22,900  INFO       Photo 36248286 — score 5.2
+2026-03-22 19:53:25,357  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:53:25,358  INFO       Photo 5502720 — score 3.2
+2026-03-22 19:53:27,917  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:53:27,918  INFO       Photo 3958956 — score 6.3
+2026-03-22 19:53:30,477  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:53:30,479  INFO       Photo 7027795 — score 7.5
+2026-03-22 19:53:33,600  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:53:33,602  INFO       Photo 36129008 — score 4.2
+2026-03-22 19:53:36,312  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:53:36,314  INFO       Photo 7031734 — score 7.5
+2026-03-22 19:53:39,180  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:53:39,182  INFO       Photo 36285830 — score 3.2
+2026-03-22 19:53:52,186  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:53:52,188  INFO       Photo 5587956 — score 8.2
+2026-03-22 19:53:54,571  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:53:54,573  INFO       Photo 3867598 — score 7.3
+2026-03-22 19:53:55,708  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathroom_exhaust_fan_cleaning_ventilatio.jpeg
+2026-03-22 19:53:55,709  INFO     Generating post for: Clean and test your bathroom exhaust fan for winter
+2026-03-22 19:54:04,578  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:54:12,153  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:54:12,155  INFO     Fetching Pexels image for: shower tile grout repair close up
+2026-03-22 19:54:15,073  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:54:15,075  INFO       Photo 6788312 — score 4.7
+2026-03-22 19:54:17,712  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:54:17,714  INFO       Photo 6903173 — score 4.0
+2026-03-22 19:54:20,347  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:54:20,349  INFO       Photo 3758497 — score 7.2
+2026-03-22 19:54:22,804  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:54:22,806  INFO       Photo 4194867 — score 6.8
+2026-03-22 19:54:25,261  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:54:25,264  INFO       Photo 5644327 — score 6.8
+2026-03-22 19:54:27,666  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:54:27,667  INFO       Photo 3615716 — score 7.0
+2026-03-22 19:54:30,280  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:54:30,282  INFO       Photo 4194866 — score 7.0
+2026-03-22 19:54:32,634  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:54:32,637  INFO       Photo 4239102 — score 7.3
+2026-03-22 19:54:35,194  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:54:35,195  INFO       Photo 6910288 — score 4.3
+2026-03-22 19:54:37,685  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:54:37,687  INFO       Photo 3958966 — score 8.2
+2026-03-22 19:54:37,877  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_shower_tile_grout_repair_close_up.jpeg
+2026-03-22 19:54:37,878  INFO     Generating post for: Prevent grout cracking caused by spring freeze-thaw damage
+2026-03-22 19:54:47,280  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:54:57,006  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:54:57,009  INFO     Saved 3 topics to topic_history.json
+2026-03-22 19:55:05,505  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:55:05,507  INFO     ✅ Branch B ready: Recaulk your bathtub before winter moisture sets in  score=8.9  slot=2026-03-16T07:30
+2026-03-22 19:55:12,982  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:55:12,983  INFO     ✅ Branch B ready: Clean and test your bathroom exhaust fan for winter  score=8.8  slot=2026-03-17T08:00
+2026-03-22 19:55:21,889  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:55:21,891  INFO     ✅ Branch B ready: Prevent grout cracking caused by spring freeze-thaw damage  score=8.8  slot=2026-03-20T08:00
+2026-03-22 19:55:21,891  INFO     ✅ Branch B: 3 post(s) generated
+2026-03-22 19:55:21,891  INFO     ── Branch C: generating saves post for Sunday…
+2026-03-22 19:55:21,891  INFO     ── Branch C: generating saves post for Sunday…
+2026-03-22 19:55:21,891  INFO     Skipping 3 recently used topics
+2026-03-22 19:55:25,551  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:55:25,553  INFO     Topics selected: ['Check bathroom pipes for freeze risk before deep cold hits']
+2026-03-22 19:55:25,553  INFO     Fetching Pexels image for: bathroom pipes insulation winter home
+2026-03-22 19:55:28,444  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:55:28,446  INFO       Photo 4194862 — score 6.8
+2026-03-22 19:55:31,105  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:55:31,106  INFO       Photo 4048080 — score 7.7
+2026-03-22 19:55:33,666  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:55:33,668  INFO       Photo 7045912 — score 6.7
+2026-03-22 19:55:35,946  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:55:35,948  INFO       Photo 6933771 — score 7.7
+2026-03-22 19:55:39,197  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:55:39,198  INFO       Photo 7086213 — score 7.5
+2026-03-22 19:55:41,755  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:55:41,757  INFO       Photo 5524223 — score 8.3
+2026-03-22 19:55:44,213  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:55:44,214  INFO       Photo 7746090 — score 8.3
+2026-03-22 19:55:46,686  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:55:46,688  INFO       Photo 3616761 — score 4.5
+2026-03-22 19:55:49,232  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:55:49,234  INFO       Photo 4405005 — score 8.0
+2026-03-22 19:55:51,525  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:55:51,526  INFO       Photo 534116 — score 7.0
+2026-03-22 19:55:51,715  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathroom_pipes_insulation_winter_home.jpeg
+2026-03-22 19:55:51,715  INFO     Generating post for: Check bathroom pipes for freeze risk before deep cold hits
+2026-03-22 19:56:00,432  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:56:08,469  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:56:08,472  INFO     Saved 1 topics to topic_history.json
+2026-03-22 19:56:17,391  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:56:26,684  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:56:35,209  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:56:35,211  INFO     ✅ Branch C ready: Check bathroom pipes for freeze risk before deep cold hits  score=9.0  slot=2026-03-22T09:00
+2026-03-22 19:56:35,211  INFO     ✅ Branch C: 1 post generated
+2026-03-22 19:56:35,211  INFO     Total posts this run: 4
+2026-03-22 19:56:35,641  INFO     Sending 4 draft(s) to Discord for approval…
+2026-03-22 19:56:35,642  WARNING  PyNaCl is not installed, voice will NOT be supported
+2026-03-22 19:56:35,643  WARNING  davey is not installed, voice will NOT be supported
+2026-03-22 19:56:35,643  INFO     logging in using static token
+2026-03-22 19:56:36,637  INFO     Shard ID None has connected to Gateway (Session ID: d55f8dbee70f3c12f6e04341ed960f5e).
+2026-03-22 19:56:38,645  INFO     Discord bot online as PDX-Facebook-Bot#4424 (id=1483657828886380685)
+2026-03-22 19:56:39,207  INFO     Sent draft for 0eb73615  msg_id=1485427017821196428
+2026-03-22 19:56:39,883  INFO     Sent draft for 0eb73615  msg_id=1485427020023464129
+2026-03-22 19:57:57,539  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:57:57,541  INFO       Photo 4404971 — score 7.0
+2026-03-22 19:57:59,997  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:57:59,999  INFO       Photo 6903205 — score 7.2
+2026-03-22 19:58:03,787  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:58:03,788  INFO       Photo 3923360 — score 7.0
+2026-03-22 19:58:06,960  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:58:06,961  INFO       Photo 5849405 — score 6.2
+2026-03-22 19:58:09,419  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:58:09,421  INFO       Photo 6585741 — score 7.3
+2026-03-22 19:58:11,695  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:58:11,696  INFO       Photo 6969997 — score 7.8
+2026-03-22 19:58:14,951  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:58:14,953  INFO       Photo 5266482 — score 6.2
+2026-03-22 19:58:17,303  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:58:17,306  INFO       Photo 7174387 — score 7.7
+2026-03-22 19:58:19,965  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:58:19,967  INFO       Photo 6899351 — score 7.3
+2026-03-22 19:58:22,730  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:58:22,732  INFO       Photo 6835172 — score 7.5
+2026-03-22 19:58:23,011  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_recaulk_your_bathtub_before_winter_moist.jpeg
+2026-03-22 19:58:32,181  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:58:40,751  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:58:48,815  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 19:58:49,524  INFO     Sent draft for 0eb73615  msg_id=1485427564062314609
+2026-03-22 20:03:00,880  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:03:00,884  INFO       Photo 7195883 — score 7.7
+2026-03-22 20:03:03,502  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:03:03,504  INFO       Photo 4154986 — score 8.3
+2026-03-22 20:03:06,178  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:03:06,180  INFO       Photo 6835087 — score 8.2
+2026-03-22 20:03:09,620  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:03:09,621  INFO       Photo 6903222 — score 7.0
+2026-03-22 20:03:12,147  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:03:12,150  INFO       Photo 3923360 — score 7.0
+2026-03-22 20:03:15,394  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:03:15,396  INFO       Photo 5502247 — score 6.8
+2026-03-22 20:03:18,055  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:03:18,057  INFO       Photo 3935336 — score 7.5
+2026-03-22 20:03:20,309  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:03:20,311  INFO       Photo 4404971 — score 7.0
+2026-03-22 20:03:22,766  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:03:22,768  INFO       Photo 6653896 — score 8.3
+2026-03-22 20:03:25,328  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:03:25,330  INFO       Photo 3769114 — score 6.2
+2026-03-22 20:03:25,558  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_recaulk_your_bathtub_before_winter_moist.jpeg
+2026-03-22 20:03:34,030  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:03:42,325  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:03:50,415  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:03:51,236  INFO     Sent draft for 0eb73615  msg_id=1485428828888367125
+2026-03-22 20:04:05,469  INFO     Post 0eb73615 approved
+2026-03-22 20:04:05,996  INFO     Sent draft for 43e3617b  msg_id=1485428891618250952
+2026-03-22 20:08:01,552  INFO     Post 43e3617b approved
+2026-03-22 20:08:02,176  INFO     Sent draft for 6372c74e  msg_id=1485429882036027513
+2026-03-22 20:10:41,731  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:10:50,119  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:10:58,819  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:10:59,604  INFO     Sent draft for 6372c74e  msg_id=1485430626508079217
+2026-03-22 20:11:21,987  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:11:21,989  INFO       Photo 6910288 — score 4.3
+2026-03-22 20:11:24,224  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:11:24,226  INFO       Photo 7788121 — score 3.5
+2026-03-22 20:11:27,023  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:11:27,024  INFO       Photo 7788122 — score 3.5
+2026-03-22 20:11:29,480  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:11:29,483  INFO       Photo 7787956 — score 3.2
+2026-03-22 20:11:31,817  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:11:31,819  INFO       Photo 6910286 — score 3.2
+2026-03-22 20:11:34,601  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:11:34,603  INFO       Photo 6903173 — score 4.0
+2026-03-22 20:11:37,305  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:11:37,307  INFO       Photo 6788312 — score 4.7
+2026-03-22 20:11:39,824  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:11:39,826  INFO       Photo 6205564 — score 4.5
+2026-03-22 20:11:42,548  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:11:42,550  INFO       Photo 5264737 — score 3.0
+2026-03-22 20:11:44,943  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:11:44,945  INFO       Photo 5146920 — score 6.3
+2026-03-22 20:11:45,283  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_prevent_grout_cracking_caused_by_spring_.jpeg
+2026-03-22 20:11:55,177  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:12:03,784  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:12:13,309  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 20:12:14,124  INFO     Sent draft for 6372c74e  msg_id=1485430938715557900
+2026-03-22 20:12:51,272  INFO     Post 6372c74e approved
+2026-03-22 20:12:52,305  INFO     Sent draft for be992fe9  msg_id=1485431099000750211
+2026-03-22 20:13:04,098  INFO     Post be992fe9 approved
+2026-03-22 20:13:04,099  INFO     All posts resolved — shutting down
+2026-03-22 20:13:04,101  INFO     Approval flow complete. Publishing approved posts to Facebook…
+2026-03-22 20:13:04,107  INFO     Post 0eb73615-4f5d-441f-aee9-6ee98af3d396 rescheduled: 2026-03-16T07:30 → 2026-03-23T07:30  reason='approved after scheduled time'
+2026-03-22 20:13:07,685  INFO     Post scheduled to Facebook (single_image)  fb_id=122096292320916701
+2026-03-22 20:13:07,687  INFO     Post 0eb73615-4f5d-441f-aee9-6ee98af3d396 → status='scheduled'
+2026-03-22 20:13:07,687  INFO     ✅ Facebook scheduled: post_id=0eb73615  fb_id=122096292320916701  slot=2026-03-23T07:30
+2026-03-22 20:13:07,688  INFO     Post 43e3617b-8c19-46f1-866c-c9cfecb1f807 rescheduled: 2026-03-17T08:00 → 2026-03-24T08:00  reason='approved after scheduled time'
+2026-03-22 20:13:09,939  INFO     Post scheduled to Facebook (single_image)  fb_id=122096292362916701
+2026-03-22 20:13:09,941  INFO     Post 43e3617b-8c19-46f1-866c-c9cfecb1f807 → status='scheduled'
+2026-03-22 20:13:09,941  INFO     ✅ Facebook scheduled: post_id=43e3617b  fb_id=122096292362916701  slot=2026-03-24T08:00
+2026-03-22 20:13:09,942  INFO     Post 6372c74e-195f-4e9c-98d5-08e992e71ac3 rescheduled: 2026-03-20T08:00 → 2026-03-27T08:00  reason='approved after scheduled time'
+2026-03-22 20:13:12,293  INFO     Post scheduled to Facebook (single_image)  fb_id=122096292446916701
+2026-03-22 20:13:12,294  INFO     Post 6372c74e-195f-4e9c-98d5-08e992e71ac3 → status='scheduled'
+2026-03-22 20:13:12,295  INFO     ✅ Facebook scheduled: post_id=6372c74e  fb_id=122096292446916701  slot=2026-03-27T08:00
+2026-03-22 20:13:12,295  INFO     Post be992fe9-2d4d-4247-bc76-6b7969567220 rescheduled: 2026-03-22T09:00 → 2026-03-29T09:00  reason='approved after scheduled time'
+2026-03-22 20:13:14,579  INFO     Post scheduled to Facebook (single_image)  fb_id=122096292506916701
+2026-03-22 20:13:14,580  INFO     Post be992fe9-2d4d-4247-bc76-6b7969567220 → status='scheduled'
+2026-03-22 20:13:14,581  INFO     ✅ Facebook scheduled: post_id=be992fe9  fb_id=122096292506916701  slot=2026-03-29T09:00
+2026-03-22 20:13:14,915  INFO     Run log written → run_log.json
+2026-03-22 20:13:14,915  INFO     ════ Run complete ════
+2026-03-22 21:26:14,199  INFO     ════ fb-autoposter weekly run — 2026-03-22 ════
+2026-03-22 21:26:14,199  INFO     ✅ Config validated
+2026-03-22 21:26:14,441  INFO     Inbox empty — skipping project story posts this week.
+2026-03-22 21:26:14,441  INFO     ✅ Inbox checked (0 project(s) found)  branch_a_count=0
+2026-03-22 21:26:14,441  INFO     ── Branch B: generating 3 post(s)…
+2026-03-22 21:26:14,523  INFO     Generating 3 Branch B maintenance post(s)…
+2026-03-22 21:26:14,527  INFO     Skipping 0 recently used topics
+2026-03-22 21:26:53,149  INFO     ════ fb-autoposter weekly run — 2026-03-22 ════
+2026-03-22 21:26:53,150  INFO     --reset: cleared run_log.json, topic_history.json, 0 temp file(s)
+2026-03-22 21:26:53,150  INFO     ✅ Config validated
+2026-03-22 21:26:53,399  INFO     Inbox empty — skipping project story posts this week.
+2026-03-22 21:26:53,399  INFO     ✅ Inbox checked (0 project(s) found)  branch_a_count=0
+2026-03-22 21:26:53,399  INFO     ── Branch B: generating 3 post(s)…
+2026-03-22 21:26:53,479  INFO     Generating 3 Branch B maintenance post(s)…
+2026-03-22 21:26:53,483  INFO     Skipping 0 recently used topics
+2026-03-22 21:26:59,735  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:26:59,764  INFO     Topics selected: ['Recaulk your bathtub before winter moisture sets in', 'Clean and test your bathroom exhaust fan for winter', 'Prevent grout cracking caused by freeze-thaw cycles']
+2026-03-22 21:26:59,764  INFO     Generating post for: Recaulk your bathtub before winter moisture sets in
+2026-03-22 21:27:09,363  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:27:17,962  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:27:17,964  INFO     Fetching Pexels image for: bathtub caulking replacement bathroom close-up
+2026-03-22 21:27:20,861  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:27:20,863  INFO       Photo 3872909 — score 6.0
+2026-03-22 21:27:23,184  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:27:23,185  INFO       Photo 4404971 — score 6.0
+2026-03-22 21:27:26,459  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:27:26,461  INFO       Photo 5266482 — score 6.2
+2026-03-22 21:27:29,019  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:27:29,022  INFO       Photo 4030050 — score 6.7
+2026-03-22 21:27:31,683  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:27:31,685  INFO       Photo 4405005 — score 6.3
+2026-03-22 21:27:34,494  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:27:34,495  INFO       Photo 5337590 — score 5.7
+2026-03-22 21:27:36,999  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:27:37,001  INFO       Photo 7168080 — score 7.0
+2026-03-22 21:27:39,547  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:27:39,550  INFO       Photo 4404972 — score 6.0
+2026-03-22 21:27:42,555  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:27:42,557  INFO       Photo 6835172 — score 6.7
+2026-03-22 21:27:45,195  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:27:45,197  INFO       Photo 4404996 — score 6.0
+2026-03-22 21:27:45,348  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathtub_caulking_replacement_bathroom_cl.jpeg
+2026-03-22 21:27:45,349  INFO     Generating post for: Clean and test your bathroom exhaust fan for winter
+2026-03-22 21:27:55,541  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:28:04,041  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:28:04,043  INFO     Fetching Pexels image for: bathroom exhaust fan ceiling maintenance
+2026-03-22 21:28:07,112  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:28:07,113  INFO       Photo 1650031 — score 6.2
+2026-03-22 21:28:09,775  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:28:09,777  INFO       Photo 7027795 — score 6.0
+2026-03-22 21:28:12,242  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:28:12,244  INFO       Photo 6587835 — score 5.8
+2026-03-22 21:28:15,612  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:28:15,614  INFO       Photo 7746939 — score 5.7
+2026-03-22 21:28:18,009  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:28:18,011  INFO       Photo 2464420 — score 3.8
+2026-03-22 21:28:21,449  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:28:21,451  INFO       Photo 6238611 — score 5.7
+2026-03-22 21:28:24,214  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:28:24,216  INFO       Photo 3958956 — score 5.0
+2026-03-22 21:28:26,671  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:28:26,674  INFO       Photo 1163109 — score 4.2
+2026-03-22 21:28:29,129  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:28:29,131  INFO       Photo 4239031 — score 6.3
+2026-03-22 21:28:31,642  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:28:31,643  INFO       Photo 7167985 — score 6.0
+2026-03-22 21:28:31,839  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathroom_exhaust_fan_ceiling_maintenance.jpeg
+2026-03-22 21:28:31,840  INFO     Generating post for: Prevent grout cracking caused by freeze-thaw cycles
+2026-03-22 21:28:41,519  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:28:49,610  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:28:49,611  INFO     Fetching Pexels image for: cracked tile grout shower repair
+2026-03-22 21:28:52,612  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:28:52,614  INFO       Photo 5146920 — score 6.3
+2026-03-22 21:28:55,138  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:28:55,140  INFO       Photo 6910288 — score 6.2
+2026-03-22 21:28:57,579  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:28:57,580  INFO       Photo 4194867 — score 5.5
+2026-03-22 21:29:00,477  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:29:00,480  INFO       Photo 7166939 — score 5.7
+2026-03-22 21:29:03,946  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:29:03,948  INFO       Photo 5644327 — score 5.7
+2026-03-22 21:29:06,608  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:29:06,610  INFO       Photo 3958966 — score 6.7
+2026-03-22 21:29:09,167  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:29:09,169  INFO       Photo 3990586 — score 6.7
+2026-03-22 21:29:11,938  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:29:11,940  INFO       Photo 6903173 — score 4.3
+2026-03-22 21:29:14,698  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:29:14,700  INFO       Photo 5146922 — score 6.3
+2026-03-22 21:29:17,053  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:29:17,055  INFO       Photo 4933253 — score 7.3
+2026-03-22 21:29:17,301  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_cracked_tile_grout_shower_repair.jpeg
+2026-03-22 21:29:17,302  INFO     Saved 3 topics to topic_history.json
+2026-03-22 21:29:25,552  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:29:25,557  INFO     ✅ Branch B ready: Recaulk your bathtub before winter moisture sets in  score=9.2  slot=2026-03-16T07:30
+2026-03-22 21:29:34,053  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:29:34,055  INFO     ✅ Branch B ready: Clean and test your bathroom exhaust fan for winter  score=8.6  slot=2026-03-17T08:00
+2026-03-22 21:29:41,372  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:29:41,375  INFO     ✅ Branch B ready: Prevent grout cracking caused by freeze-thaw cycles  score=9.0  slot=2026-03-20T08:00
+2026-03-22 21:29:41,375  INFO     ✅ Branch B: 3 post(s) generated
+2026-03-22 21:29:41,375  INFO     ── Branch C: generating saves post for Sunday…
+2026-03-22 21:29:41,375  INFO     ── Branch C: generating saves post for Sunday…
+2026-03-22 21:29:41,375  INFO     Skipping 3 recently used topics
+2026-03-22 21:29:44,701  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:29:44,703  INFO     Topics selected: ['Control bathroom moisture to prevent winter mould growth']
+2026-03-22 21:29:44,703  INFO     Generating post for: Control bathroom moisture to prevent winter mould growth
+2026-03-22 21:29:53,815  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:30:04,056  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:30:04,057  INFO     Fetching Pexels image for: bathroom condensation window moisture winter
+2026-03-22 21:30:07,434  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:30:07,436  INFO       Photo 6933082 — score 6.3
+2026-03-22 21:30:11,839  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:30:11,841  INFO       Photo 6932443 — score 5.5
+2026-03-22 21:30:14,501  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:30:14,503  INFO       Photo 3605367 — score 6.5
+2026-03-22 21:30:17,172  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:30:17,174  INFO       Photo 325676 — score 5.0
+2026-03-22 21:30:19,724  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:30:19,726  INFO       Photo 6220326 — score 4.5
+2026-03-22 21:30:22,385  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:30:22,387  INFO       Photo 1646332 — score 6.3
+2026-03-22 21:30:25,458  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:30:25,460  INFO       Photo 3481163 — score 6.2
+2026-03-22 21:30:28,427  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:30:28,429  INFO       Photo 5906657 — score 4.2
+2026-03-22 21:30:31,294  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:30:31,296  INFO       Photo 7815646 — score 4.8
+2026-03-22 21:30:33,956  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:30:33,957  INFO       Photo 6033971 — score 4.5
+2026-03-22 21:30:34,870  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathroom_condensation_window_moisture_wi.jpeg
+2026-03-22 21:30:34,871  INFO     Saved 1 topics to topic_history.json
+2026-03-22 21:30:42,763  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:30:51,877  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:30:55,154  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:30:55,156  INFO       Photo 4114725 — score 6.0
+2026-03-22 21:30:57,919  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:30:57,921  INFO       Photo 36087810 — score 6.7
+2026-03-22 21:31:00,582  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:31:00,584  INFO       Photo 4114724 — score 5.2
+2026-03-22 21:31:03,038  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:31:03,039  INFO       Photo 4022784 — score 5.3
+2026-03-22 21:31:06,831  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:31:06,833  INFO       Photo 7607298 — score 5.5
+2026-03-22 21:31:08,404  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:31:08,406  INFO       Photo 5240613 — score 5.3
+2026-03-22 21:31:11,027  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:31:11,029  INFO       Photo 7086220 — score 5.7
+2026-03-22 21:31:14,098  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:31:14,100  INFO       Photo 7262993 — score 6.0
+2026-03-22 21:31:16,556  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:31:16,559  INFO       Photo 3758497 — score 5.5
+2026-03-22 21:31:19,116  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:31:19,118  INFO       Photo 5240611 — score 5.8
+2026-03-22 21:31:19,991  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_control_bathroom_moisture_to_prevent_win.jpeg
+2026-03-22 21:31:27,688  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:31:27,689  INFO     ✅ Branch C ready: Control bathroom moisture to prevent winter mould growth  score=8.6  slot=2026-03-22T09:00
+2026-03-22 21:31:27,689  INFO     ✅ Branch C: 1 post generated
+2026-03-22 21:31:27,689  INFO     Total posts this run: 4
+2026-03-22 21:31:28,036  INFO     Sending 4 draft(s) to Discord for approval…
+2026-03-22 21:31:28,037  WARNING  PyNaCl is not installed, voice will NOT be supported
+2026-03-22 21:31:28,037  WARNING  davey is not installed, voice will NOT be supported
+2026-03-22 21:31:28,037  INFO     logging in using static token
+2026-03-22 21:31:29,048  INFO     Shard ID None has connected to Gateway (Session ID: 4ba69007f52c0d700210ec1c1be3da66).
+2026-03-22 21:31:31,052  INFO     Discord bot online as PDX-Facebook-Bot#4424 (id=1483657828886380685)
+2026-03-22 21:31:31,565  INFO     Sent draft for efc0f341  msg_id=1485450893448183958
+2026-03-22 21:31:32,214  INFO     Sent draft for efc0f341  msg_id=1485450895612313682
+2026-03-22 21:49:22,525  INFO     Shard ID None session has been invalidated.
+2026-03-22 21:49:27,951  INFO     Shard ID None has connected to Gateway (Session ID: cdc60dc1912c37ad4f4d12630a74c4fd).
+2026-03-22 21:49:29,957  INFO     Discord bot online as PDX-Facebook-Bot#4424 (id=1483657828886380685)
+2026-03-22 21:49:30,595  INFO     Sent draft for efc0f341  msg_id=1485455419076776109
+2026-03-22 21:49:31,077  INFO     Sent draft for efc0f341  msg_id=1485455421002223646
+2026-03-22 21:51:31,903  INFO     Shard ID None session has been invalidated.
+2026-03-22 21:51:37,497  INFO     Shard ID None has connected to Gateway (Session ID: 00e8bc92ce2b81affd97ae84e7b85bb7).
+2026-03-22 21:51:39,503  INFO     Discord bot online as PDX-Facebook-Bot#4424 (id=1483657828886380685)
+2026-03-22 21:51:40,668  INFO     Sent draft for efc0f341  msg_id=1485455963522859048
+2026-03-22 21:51:41,075  INFO     Sent draft for efc0f341  msg_id=1485455966571991130
+2026-03-22 21:52:32,227  INFO     Post efc0f341 approved
+2026-03-22 21:52:32,649  INFO     Sent draft for 5a938e75  msg_id=1485456182947614782
+2026-03-22 21:56:06,057  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:56:06,063  INFO       Photo 1650031 — score 6.0
+2026-03-22 21:56:08,787  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:56:08,789  INFO       Photo 416423 — score 3.5
+2026-03-22 21:56:11,333  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:56:11,335  INFO       Photo 7396978 — score 3.3
+2026-03-22 21:56:14,018  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:56:14,020  INFO       Photo 36248286 — score 6.7
+2026-03-22 21:56:16,327  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:56:16,329  INFO       Photo 42220 — score 3.7
+2026-03-22 21:56:18,697  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:56:18,699  INFO       Photo 6926604 — score 4.5
+2026-03-22 21:56:21,646  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:56:21,648  INFO       Photo 3907191 — score 4.8
+2026-03-22 21:56:24,462  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:56:24,464  INFO       Photo 5502720 — score 3.2
+2026-03-22 21:56:27,168  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:56:27,174  INFO       Photo 6034678 — score 3.2
+2026-03-22 21:56:29,601  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:56:29,603  INFO       Photo 3520693 — score 3.5
+2026-03-22 21:56:29,808  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_clean_and_test_your_bathroom_exhaust_fan.jpeg
+2026-03-22 21:56:30,448  INFO     Sent draft for 5a938e75  msg_id=1485457180231467082
+2026-03-22 21:57:25,979  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:57:25,981  INFO       Photo 1650031 — score 6.0
+2026-03-22 21:57:28,398  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:57:28,400  INFO       Photo 7027795 — score 6.0
+2026-03-22 21:57:31,046  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:57:31,048  INFO       Photo 7396978 — score 3.3
+2026-03-22 21:57:34,217  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:57:34,218  INFO       Photo 42220 — score 3.7
+2026-03-22 21:57:38,463  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:57:38,466  INFO       Photo 36248286 — score 6.2
+2026-03-22 21:57:41,711  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:57:41,713  INFO       Photo 5502720 — score 3.2
+2026-03-22 21:57:41,863  INFO     Retrying request to /v1/messages in 0.405182 seconds
+2026-03-22 21:57:44,908  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:57:44,910  INFO       Photo 3958956 — score 5.0
+2026-03-22 21:57:47,578  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:57:47,580  INFO       Photo 3907191 — score 4.8
+2026-03-22 21:57:50,269  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:57:50,271  INFO       Photo 7534297 — score 4.0
+2026-03-22 21:57:53,247  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 21:57:53,249  INFO       Photo 3958966 — score 5.7
+2026-03-22 21:57:53,403  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_clean_and_test_your_bathroom_exhaust_fan.jpeg
+2026-03-22 21:57:53,883  INFO     Sent draft for 5a938e75  msg_id=1485457530359386274
+2026-03-22 22:01:12,810  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:01:20,947  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:01:29,362  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:01:30,187  INFO     Sent draft for 5a938e75  msg_id=1485458436622778433
+2026-03-22 22:01:47,437  INFO     Post 5a938e75 approved
+2026-03-22 22:01:47,484  ERROR    Ignoring exception in on_message
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/asyncio/selector_events.py", line 943, in _write_ready
+    n = self._sock.send(self._buffer)
+BrokenPipeError: [Errno 32] Broken pipe
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/discord/client.py", line 508, in _run_event
+    await coro(*args, **kwargs)
+  File "/Users/kyle/Projects/PDX-Marketing/fb-autoposter/agents/../discord_bot.py", line 340, in on_message
+    elif lower.startswith("reject"):
+  File "/Users/kyle/Projects/PDX-Marketing/fb-autoposter/agents/../discord_bot.py", line 422, in _handle_approve
+  File "/Users/kyle/Projects/PDX-Marketing/fb-autoposter/agents/../discord_bot.py", line 662, in _check_done
+    # ── Completion check ───────────────────────────────────────────────────────
+  File "/Users/kyle/Projects/PDX-Marketing/fb-autoposter/agents/../discord_bot.py", line 645, in _send_next_pending
+    pending = [p for p in all_posts if p["status"] in ("pending", "max_revisions")]
+  File "/Users/kyle/Projects/PDX-Marketing/fb-autoposter/agents/../discord_bot.py", line 372, in _send_draft
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/discord/abc.py", line 1706, in send
+    data = await state.http.send_message(channel.id, params=params)
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/discord/http.py", line 659, in request
+    async with self.__session.request(method, url, **kwargs) as response:
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/aiohttp/client.py", line 1510, in __aenter__
+    self._resp: _RetType = await self._coro
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/aiohttp/client.py", line 757, in _connect_and_send_request
+    await resp.start(conn)
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/aiohttp/client_reqrep.py", line 539, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/aiohttp/streams.py", line 703, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [Errno 32] Broken pipe
+2026-03-22 22:17:59,708  INFO     ════ fb-autoposter weekly run — 2026-03-22 ════
+2026-03-22 22:17:59,708  INFO     Pruned 2 post(s) from queue (2 remaining).
+2026-03-22 22:17:59,708  INFO     --resend-pending: re-sending pending posts to Discord.
+2026-03-22 22:17:59,806  INFO     Found 2 pending post(s) from previous run.
+2026-03-22 22:17:59,806  WARNING  PyNaCl is not installed, voice will NOT be supported
+2026-03-22 22:17:59,806  WARNING  davey is not installed, voice will NOT be supported
+2026-03-22 22:17:59,806  INFO     logging in using static token
+2026-03-22 22:18:00,503  INFO     Shard ID None has connected to Gateway (Session ID: 5ee87765d59bdec9df8937c980f495e1).
+2026-03-22 22:18:02,507  INFO     Discord bot online as PDX-Facebook-Bot#4424 (id=1483657828886380685)
+2026-03-22 22:18:03,205  INFO     Sent draft for 278761b5  msg_id=1485462601948200990
+2026-03-22 22:18:25,771  INFO     Post e499a7e0 approved
+2026-03-22 22:18:25,775  INFO     All posts resolved — shutting down
+2026-03-22 22:18:25,854  INFO     Post 278761b5 approved
+2026-03-22 22:18:25,854  INFO     All posts resolved — shutting down
+2026-03-22 22:18:25,855  INFO     Approval flow complete. Publishing approved posts to Facebook…
+2026-03-22 22:18:25,856  INFO     Post 278761b5-30b1-4b54-b8b8-dff856cd7812 rescheduled: 2026-03-20T08:00 → 2026-03-27T08:00  reason='approved after scheduled time'
+2026-03-22 22:18:28,301  INFO     Post scheduled to Facebook (single_image)  fb_id=122096334470916701
+2026-03-22 22:18:28,302  INFO     Post 278761b5-30b1-4b54-b8b8-dff856cd7812 → status='scheduled'
+2026-03-22 22:18:28,303  INFO     ✅ Facebook scheduled: post_id=278761b5  fb_id=122096334470916701  slot=2026-03-27T08:00
+2026-03-22 22:18:28,304  INFO     Post e499a7e0-5e5e-4ed3-b40c-97e85ba8c3c9 rescheduled: 2026-03-22T09:00 → 2026-03-29T09:00  reason='approved after scheduled time'
+2026-03-22 22:18:28,330  INFO     Post scheduled to Facebook (single_image)  fb_id=122096334458916701
+2026-03-22 22:18:28,331  INFO     Post 278761b5-30b1-4b54-b8b8-dff856cd7812 → status='scheduled'
+2026-03-22 22:18:28,331  INFO     ✅ Facebook scheduled: post_id=278761b5  fb_id=122096334458916701  slot=2026-03-27T08:00
+2026-03-22 22:18:30,456  INFO     Post scheduled to Facebook (single_image)  fb_id=122096334566916701
+2026-03-22 22:18:30,458  INFO     Post e499a7e0-5e5e-4ed3-b40c-97e85ba8c3c9 → status='scheduled'
+2026-03-22 22:18:30,458  INFO     ✅ Facebook scheduled: post_id=e499a7e0  fb_id=122096334566916701  slot=2026-03-29T09:00
+2026-03-22 22:18:31,104  INFO     Run log written → run_log.json
+2026-03-22 22:18:31,104  INFO     ════ Run complete ════
+2026-03-22 22:18:32,539  INFO     Post published immediately to Facebook (single_image)  fb_id=122096334578916701
+2026-03-22 22:18:32,540  INFO     Post e499a7e0-5e5e-4ed3-b40c-97e85ba8c3c9 → status='posted'
+2026-03-22 22:18:32,540  INFO     ✅ Facebook posted: post_id=e499a7e0  fb_id=122096334578916701  slot=2026-03-22T09:00
+2026-03-22 22:39:58,076  INFO     ════ fb-autoposter weekly run — 2026-03-22 ════
+2026-03-22 22:39:58,078  INFO     --reset: cleared run_log.json, topic_history.json, media_log.json, 6 temp file(s)
+2026-03-22 22:39:58,078  INFO     ✅ Config validated
+2026-03-22 22:39:58,078  INFO     Pruned 2 post(s) from queue (0 remaining).
+2026-03-22 22:39:58,325  INFO     Inbox low — processing 1 project story post this week.
+2026-03-22 22:39:58,325  INFO     ✅ Inbox checked (1 project(s) found)  branch_a_count=1
+2026-03-22 22:39:58,325  INFO     ── Branch A: generating 1 post(s)…
+2026-03-22 22:39:58,408  INFO     Analyzing project: proj-luxury-1
+2026-03-22 22:39:58,408  INFO     Analyzing project: proj-luxury-1
+2026-03-22 22:39:58,408  INFO     Video project detected (1 video(s))
+2026-03-22 22:39:58,412  INFO     Analyzing video: vid-3.mp4
+2026-03-22 22:39:58,533  INFO     Duration: 8.6 s
+2026-03-22 22:40:05,485  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:40:05,516  INFO     Content type detected: walkthrough
+2026-03-22 22:40:05,516  INFO     Description: This stunning bathroom renovation features a freestanding white soaking tub positioned beneath a large arched window with a chandelier, creating an elegant focal point. The space includes a modern floating wood vanity with a marble or quartz countertop, black matte fixtures, and a large rectangular mirror with industrial-style vanity lighting above. The walls are painted in a soft, warm neutral tone, and the floors appear to be large-format light-colored tile, giving the room a clean and spacious feel. The overall design blends contemporary minimalism with classic architectural details like the arched window.
+2026-03-22 22:40:05,516  INFO     Trim target: 30–60 s
+2026-03-22 22:40:05,548  INFO     Trimmed to 8.6 s → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/trimmed/vid-3_trimmed.mp4
+2026-03-22 22:40:05,549  INFO     Moved 'proj-luxury-1' → processed/
+2026-03-22 22:40:05,549  INFO     Generating Branch A post for: proj-luxury-1
+2026-03-22 22:40:17,172  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:40:27,928  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:40:36,848  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:40:36,850  INFO     ✅ Branch A ready: proj-luxury-1                   score=7.7  slot=2026-03-16T07:30
+2026-03-22 22:40:36,850  INFO     ✅ Branch A: 1 post(s) generated
+2026-03-22 22:40:36,851  INFO     ── Branch B: generating 2 post(s)…
+2026-03-22 22:40:36,860  INFO     Generating 2 Branch B maintenance post(s)…
+2026-03-22 22:40:36,868  INFO     Skipping 0 recently used topics
+2026-03-22 22:40:42,816  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:40:42,817  INFO     Topics selected: ['Replacing bathroom caulking before winter', 'Cleaning and testing your bathroom exhaust fan']
+2026-03-22 22:40:42,818  INFO     Generating post for: Replacing bathroom caulking before winter
+2026-03-22 22:40:51,731  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:40:59,782  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:40:59,784  INFO     Fetching Pexels image for: bathroom caulking replacement silicone tub
+2026-03-22 22:41:02,798  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:41:02,801  INFO       Photo 5691660 — score 4.2
+2026-03-22 22:41:05,378  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:41:05,380  INFO       Photo 7195883 — score 6.2
+2026-03-22 22:41:08,064  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:41:08,065  INFO       Photo 6124242 — score 7.5
+2026-03-22 22:41:12,570  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:41:12,575  INFO       Photo 534116 — score 6.3
+2026-03-22 22:41:15,301  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:41:15,302  INFO       Photo 3769114 — score 6.2
+2026-03-22 22:41:17,973  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:41:17,974  INFO       Photo 4154986 — score 7.5
+2026-03-22 22:41:20,651  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:41:20,653  INFO       Photo 7031832 — score 6.0
+2026-03-22 22:41:23,389  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:41:23,391  INFO       Photo 4405007 — score 6.7
+2026-03-22 22:41:26,751  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:41:26,753  INFO       Photo 6207947 — score 6.0
+2026-03-22 22:41:29,069  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:41:29,071  INFO       Photo 7027725 — score 7.0
+2026-03-22 22:41:29,233  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathroom_caulking_replacement_silicone_t.jpeg
+2026-03-22 22:41:29,233  INFO     Generating post for: Cleaning and testing your bathroom exhaust fan
+2026-03-22 22:41:39,287  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:41:48,003  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:41:48,004  INFO     Fetching Pexels image for: bathroom exhaust fan cleaning maintenance
+2026-03-22 22:41:50,954  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:41:50,956  INFO       Photo 4239123 — score 5.7
+2026-03-22 22:41:53,923  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:41:53,926  INFO       Photo 4239031 — score 6.0
+2026-03-22 22:41:56,333  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:41:56,335  INFO       Photo 5591464 — score 6.0
+2026-03-22 22:41:58,675  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:41:58,677  INFO       Photo 5591461 — score 6.7
+2026-03-22 22:42:01,648  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:42:01,650  INFO       Photo 4239130 — score 5.7
+2026-03-22 22:42:04,211  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:42:04,214  INFO       Photo 4239142 — score 5.8
+2026-03-22 22:42:06,946  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:42:06,948  INFO       Photo 3867607 — score 5.5
+2026-03-22 22:42:09,610  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:42:09,612  INFO       Photo 5591490 — score 6.2
+2026-03-22 22:42:12,256  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:42:12,258  INFO       Photo 3867618 — score 6.7
+2026-03-22 22:42:14,743  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:42:14,747  INFO       Photo 7027795 — score 6.2
+2026-03-22 22:42:14,912  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathroom_exhaust_fan_cleaning_maintenanc.jpeg
+2026-03-22 22:42:14,916  INFO     Saved 2 topics to topic_history.json
+2026-03-22 22:42:22,555  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:42:22,558  INFO     ✅ Branch B ready: Replacing bathroom caulking before winter  score=8.6  slot=2026-03-17T08:00
+2026-03-22 22:42:30,989  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:42:30,991  INFO     ✅ Branch B ready: Cleaning and testing your bathroom exhaust fan  score=8.9  slot=2026-03-20T08:00
+2026-03-22 22:42:30,991  INFO     ✅ Branch B: 2 post(s) generated
+2026-03-22 22:42:30,991  INFO     ── Branch C: generating saves post for Sunday…
+2026-03-22 22:42:30,991  INFO     ── Branch C: generating saves post for Sunday…
+2026-03-22 22:42:30,992  INFO     Skipping 2 recently used topics
+2026-03-22 22:42:34,607  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:42:34,608  INFO     Topics selected: ['Preventing mould behind bathroom tiles during humid GTA summers']
+2026-03-22 22:42:34,609  INFO     Generating post for: Preventing mould behind bathroom tiles during humid GTA summers
+2026-03-22 22:42:45,367  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:42:53,596  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:42:53,597  INFO     Fetching Pexels image for: bathroom tile mould prevention moisture
+2026-03-22 22:42:56,553  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:42:56,555  INFO       Photo 36087810 — score 6.7
+2026-03-22 22:42:59,455  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:42:59,457  INFO       Photo 7262993 — score 6.7
+2026-03-22 22:43:02,006  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:43:02,007  INFO       Photo 7303867 — score 6.5
+2026-03-22 22:43:04,554  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:43:04,555  INFO       Photo 3958966 — score 7.2
+2026-03-22 22:43:07,415  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:43:07,418  INFO       Photo 6653889 — score 7.0
+2026-03-22 22:43:10,680  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:43:10,682  INFO       Photo 6934233 — score 5.7
+2026-03-22 22:43:13,290  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:43:13,291  INFO       Photo 5266482 — score 6.2
+2026-03-22 22:43:16,147  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:43:16,149  INFO       Photo 7195883 — score 5.8
+2026-03-22 22:43:18,755  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:43:18,756  INFO       Photo 4405005 — score 7.0
+2026-03-22 22:43:21,396  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:43:21,398  INFO       Photo 7587734 — score 6.3
+2026-03-22 22:43:21,578  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_bathroom_tile_mould_prevention_moisture.jpeg
+2026-03-22 22:43:21,581  INFO     Saved 1 topics to topic_history.json
+2026-03-22 22:43:29,523  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:43:39,198  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:43:42,626  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:43:42,628  INFO       Photo 4022784 — score 6.0
+2026-03-22 22:43:45,304  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:43:45,306  INFO       Photo 5266482 — score 5.7
+2026-03-22 22:43:47,869  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:43:47,871  INFO       Photo 7303867 — score 6.5
+2026-03-22 22:43:50,377  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:43:50,381  INFO       Photo 4405005 — score 6.7
+2026-03-22 22:43:53,194  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:43:53,196  INFO       Photo 3958966 — score 7.5
+2026-03-22 22:43:55,624  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:43:55,626  INFO       Photo 6653889 — score 7.5
+2026-03-22 22:43:58,244  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:43:58,246  INFO       Photo 6934233 — score 6.0
+2026-03-22 22:44:00,978  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:44:00,980  INFO       Photo 7303906 — score 5.3
+2026-03-22 22:44:03,332  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:44:03,335  INFO       Photo 36087810 — score 6.3
+2026-03-22 22:44:06,532  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:44:06,533  INFO       Photo 6322859 — score 5.7
+2026-03-22 22:44:06,779  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_preventing_mould_behind_bathroom_tiles_d.jpeg
+2026-03-22 22:44:16,107  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:44:16,109  INFO     ✅ Branch C ready: Preventing mould behind bathroom tiles during humid GTA summers  score=8.2  slot=2026-03-22T09:00
+2026-03-22 22:44:16,109  INFO     ✅ Branch C: 1 post generated
+2026-03-22 22:44:16,109  INFO     Total posts this run: 4
+2026-03-22 22:44:16,439  INFO     Sending 4 draft(s) to Discord for approval…
+2026-03-22 22:44:16,441  WARNING  PyNaCl is not installed, voice will NOT be supported
+2026-03-22 22:44:16,441  WARNING  davey is not installed, voice will NOT be supported
+2026-03-22 22:44:16,441  INFO     logging in using static token
+2026-03-22 22:44:17,234  INFO     Shard ID None has connected to Gateway (Session ID: 278db881b88a869a1890110b0e8a44d6).
+2026-03-22 22:44:19,237  INFO     Discord bot online as PDX-Facebook-Bot#4424 (id=1483657828886380685)
+2026-03-22 22:44:19,972  INFO     Sent draft for 3b68832b  msg_id=1485469215472353443
+2026-03-22 22:44:47,195  INFO     Post 3b68832b approved
+2026-03-22 22:44:47,749  INFO     Sent draft for 392d0284  msg_id=1485469332132724736
+2026-03-22 22:46:00,019  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:46:00,021  INFO       Photo 5266482 — score 6.5
+2026-03-22 22:46:02,531  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:46:02,533  INFO       Photo 6969997 — score 7.3
+2026-03-22 22:46:05,115  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:46:05,117  INFO       Photo 6903205 — score 6.3
+2026-03-22 22:46:08,381  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:46:08,383  INFO       Photo 5178092 — score 7.7
+2026-03-22 22:46:11,134  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:46:11,136  INFO       Photo 7587289 — score 6.8
+2026-03-22 22:46:13,454  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:46:13,456  INFO       Photo 7173665 — score 7.2
+2026-03-22 22:46:16,376  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:46:16,377  INFO       Photo 4469182 — score 7.8
+2026-03-22 22:46:18,864  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:46:18,866  INFO       Photo 7587734 — score 6.7
+2026-03-22 22:46:21,261  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:46:21,263  INFO       Photo 7174387 — score 7.3
+2026-03-22 22:46:23,893  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:46:23,894  INFO       Photo 1909791 — score 7.3
+2026-03-22 22:46:24,128  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_replace_with_a_bathtub_caulk_next_to_a_w.jpeg
+2026-03-22 22:46:24,281  ERROR    Ignoring exception in on_message
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/asyncio/sslproto.py", line 528, in data_received
+    ssldata, appdata = self._sslpipe.feed_ssldata(data)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/asyncio/sslproto.py", line 199, in feed_ssldata
+    chunk = self._sslobj.read(self.max_size)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 888, in read
+    v = self._sslobj.read(len)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_RECORD_MAC] sslv3 alert bad record mac (_ssl.c:2633)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/discord/client.py", line 508, in _run_event
+    await coro(*args, **kwargs)
+  File "/Users/kyle/Projects/PDX-Marketing/fb-autoposter/agents/../discord_bot.py", line 343, in on_message
+    await self._handle_remedia(entry, queue, text[7:].strip())
+  File "/Users/kyle/Projects/PDX-Marketing/fb-autoposter/agents/../discord_bot.py", line 498, in _handle_remedia
+    await self._send_draft(fresh, revision_label=f"Revision {new_rev} ({label})")
+  File "/Users/kyle/Projects/PDX-Marketing/fb-autoposter/agents/../discord_bot.py", line 371, in _send_draft
+    msg = await self._channel.send(text, files=files)
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/discord/abc.py", line 1706, in send
+    data = await state.http.send_message(channel.id, params=params)
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/discord/http.py", line 659, in request
+    async with self.__session.request(method, url, **kwargs) as response:
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/aiohttp/client.py", line 1510, in __aenter__
+    self._resp: _RetType = await self._coro
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/aiohttp/client.py", line 757, in _connect_and_send_request
+    await resp.start(conn)
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/aiohttp/client_reqrep.py", line 539, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/aiohttp/streams.py", line 703, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [Errno 1] [SSL: SSLV3_ALERT_BAD_RECORD_MAC] sslv3 alert bad record mac (_ssl.c:2633)
+2026-03-22 22:58:23,635  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:58:23,640  INFO       Photo 5266482 — score 6.5
+2026-03-22 22:58:26,058  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:58:26,060  INFO       Photo 6969997 — score 7.3
+2026-03-22 22:58:28,589  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:58:28,591  INFO       Photo 6903205 — score 6.3
+2026-03-22 22:58:31,302  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:58:31,304  INFO       Photo 5178092 — score 7.3
+2026-03-22 22:58:33,542  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:58:33,544  INFO       Photo 7587289 — score 7.0
+2026-03-22 22:58:35,910  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:58:35,913  INFO       Photo 7173665 — score 7.2
+2026-03-22 22:58:40,115  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:58:40,117  INFO       Photo 4469182 — score 7.8
+2026-03-22 22:58:43,030  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:58:43,032  INFO       Photo 7587734 — score 6.7
+2026-03-22 22:58:45,620  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:58:45,622  INFO       Photo 7174387 — score 7.3
+2026-03-22 22:58:48,194  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 22:58:48,195  INFO       Photo 1909791 — score 7.5
+2026-03-22 22:58:48,361  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_replace_with_a_bathtub_caulk_next_to_a_w.jpeg
+2026-03-22 22:58:48,510  ERROR    Ignoring exception in on_message
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/asyncio/sslproto.py", line 528, in data_received
+    ssldata, appdata = self._sslpipe.feed_ssldata(data)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/asyncio/sslproto.py", line 199, in feed_ssldata
+    chunk = self._sslobj.read(self.max_size)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 888, in read
+    v = self._sslobj.read(len)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_RECORD_MAC] sslv3 alert bad record mac (_ssl.c:2633)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/discord/client.py", line 508, in _run_event
+    await coro(*args, **kwargs)
+  File "/Users/kyle/Projects/PDX-Marketing/fb-autoposter/agents/../discord_bot.py", line 343, in on_message
+    await self._handle_remedia(entry, queue, text[7:].strip())
+  File "/Users/kyle/Projects/PDX-Marketing/fb-autoposter/agents/../discord_bot.py", line 498, in _handle_remedia
+    log.error("Remedia failed: %s", exc)
+  File "/Users/kyle/Projects/PDX-Marketing/fb-autoposter/agents/../discord_bot.py", line 371, in _send_draft
+    else:
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/discord/abc.py", line 1706, in send
+    data = await state.http.send_message(channel.id, params=params)
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/discord/http.py", line 659, in request
+    async with self.__session.request(method, url, **kwargs) as response:
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/aiohttp/client.py", line 1510, in __aenter__
+    self._resp: _RetType = await self._coro
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/aiohttp/client.py", line 757, in _connect_and_send_request
+    await resp.start(conn)
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/aiohttp/client_reqrep.py", line 539, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+  File "/Users/kyle/Library/Python/3.9/lib/python/site-packages/aiohttp/streams.py", line 703, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [Errno 1] [SSL: SSLV3_ALERT_BAD_RECORD_MAC] sslv3 alert bad record mac (_ssl.c:2633)
+2026-03-22 23:02:40,121  INFO     Post 392d0284 approved
+2026-03-22 23:02:40,188  WARNING  Send failed for 05b9ca0f (attempt 1/3): [Errno 1] [SSL: SSLV3_ALERT_BAD_RECORD_MAC] sslv3 alert bad record mac (_ssl.c:2633) — retrying in 2s
+2026-03-22 23:02:43,076  INFO     Sent draft for 05b9ca0f  msg_id=1485473841793994924
+2026-03-22 23:05:55,680  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:05:55,683  INFO       Photo 7027795 — score 6.2
+2026-03-22 23:05:58,101  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:05:58,102  INFO       Photo 5524223 — score 6.5
+2026-03-22 23:06:00,514  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:06:00,516  INFO       Photo 4030050 — score 5.8
+2026-03-22 23:06:04,367  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:06:04,369  INFO       Photo 3958966 — score 6.0
+2026-03-22 23:06:06,760  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:06:06,761  INFO       Photo 3935352 — score 6.0
+2026-03-22 23:06:09,538  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:06:09,539  INFO       Photo 6934233 — score 4.7
+2026-03-22 23:06:12,494  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:06:12,496  INFO       Photo 7032208 — score 6.3
+2026-03-22 23:06:15,300  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:06:15,303  INFO       Photo 7166936 — score 5.3
+2026-03-22 23:06:18,272  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:06:18,275  INFO       Photo 1722196 — score 3.2
+2026-03-22 23:06:21,479  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:06:21,480  INFO       Photo 7028124 — score 6.0
+2026-03-22 23:06:21,720  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_replace_with_a_bathroom_exhaust_fan_imag.jpeg
+2026-03-22 23:06:22,332  INFO     Sent draft for 05b9ca0f  msg_id=1485474761781018668
+2026-03-22 23:07:46,950  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:07:46,954  INFO       Photo 1650031 — score 5.3
+2026-03-22 23:07:49,673  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:07:49,675  INFO       Photo 416423 — score 3.5
+2026-03-22 23:07:52,574  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:07:52,576  INFO       Photo 7396978 — score 3.5
+2026-03-22 23:07:55,635  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:07:55,637  INFO       Photo 42220 — score 3.7
+2026-03-22 23:07:58,079  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:07:58,080  INFO       Photo 5233283 — score 3.2
+2026-03-22 23:08:00,315  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:08:00,317  INFO       Photo 6926604 — score 4.5
+2026-03-22 23:08:02,892  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:08:02,894  INFO       Photo 5502720 — score 3.5
+2026-03-22 23:08:05,757  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:08:05,758  INFO       Photo 3520693 — score 3.2
+2026-03-22 23:08:08,139  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:08:08,141  INFO       Photo 36248286 — score 6.3
+2026-03-22 23:08:10,759  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-22 23:08:10,760  INFO       Photo 1374448 — score 4.3
+2026-03-22 23:08:10,923  INFO     Downloaded → /Users/kyle/Projects/PDX-Marketing/fb-autoposter/media/temp/pexels_replace_with_a_exhaust_fan_image.jpeg
+2026-03-22 23:08:11,400  INFO     Sent draft for 05b9ca0f  msg_id=1485475219882774560
+2026-03-22 23:08:26,448  INFO     Post 05b9ca0f approved
+2026-03-22 23:08:27,181  INFO     Sent draft for 1407790a  msg_id=1485475285527822486
+2026-03-22 23:08:46,050  INFO     Post 1407790a approved
+2026-03-22 23:08:46,051  INFO     All posts resolved — shutting down
+2026-03-22 23:08:46,053  INFO     Approval flow complete. Publishing approved posts to Facebook…
+2026-03-22 23:08:46,061  INFO     Post 3b68832b-0b41-4d5a-851f-22b967e24a8c rescheduled: 2026-03-16T07:30 → 2026-03-23T07:30  reason='approved after scheduled time'
+2026-03-22 23:08:56,506  INFO     Post scheduled to Facebook (video)  fb_id=1124073063189675
+2026-03-22 23:08:56,507  INFO     Post 3b68832b-0b41-4d5a-851f-22b967e24a8c → status='scheduled'
+2026-03-22 23:08:56,508  INFO     ✅ Facebook scheduled: post_id=3b68832b  fb_id=1124073063189675  slot=2026-03-23T07:30
+2026-03-22 23:08:56,508  INFO     Post 392d0284-ee1b-4937-abc9-f570e6bd953a rescheduled: 2026-03-17T08:00 → 2026-03-24T08:00  reason='approved after scheduled time'
+2026-03-22 23:08:59,676  INFO     Post scheduled to Facebook (single_image)  fb_id=122096353010916701
+2026-03-22 23:08:59,678  INFO     Post 392d0284-ee1b-4937-abc9-f570e6bd953a → status='scheduled'
+2026-03-22 23:08:59,678  INFO     ✅ Facebook scheduled: post_id=392d0284  fb_id=122096353010916701  slot=2026-03-24T08:00
+2026-03-22 23:08:59,680  INFO     Post 05b9ca0f-c4aa-45ac-a048-5d7a8af737ca rescheduled: 2026-03-20T08:00 → 2026-03-27T08:00  reason='approved after scheduled time'
+2026-03-22 23:09:02,253  INFO     Post scheduled to Facebook (single_image)  fb_id=122096353070916701
+2026-03-22 23:09:02,255  INFO     Post 05b9ca0f-c4aa-45ac-a048-5d7a8af737ca → status='scheduled'
+2026-03-22 23:09:02,255  INFO     ✅ Facebook scheduled: post_id=05b9ca0f  fb_id=122096353070916701  slot=2026-03-27T08:00
+2026-03-22 23:09:02,257  INFO     Post 1407790a-dd18-48b0-83f9-b5fdf7c25aff rescheduled: 2026-03-22T09:00 → 2026-03-29T09:00  reason='approved after scheduled time'
+2026-03-22 23:09:04,425  INFO     Post scheduled to Facebook (single_image)  fb_id=122096353190916701
+2026-03-22 23:09:04,427  INFO     Post 1407790a-dd18-48b0-83f9-b5fdf7c25aff → status='scheduled'
+2026-03-22 23:09:04,427  INFO     ✅ Facebook scheduled: post_id=1407790a  fb_id=122096353190916701  slot=2026-03-29T09:00
+2026-03-22 23:09:04,698  INFO     Run log written → run_log.json
+2026-03-22 23:09:04,699  INFO     ════ Run complete ════
